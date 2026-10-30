@@ -11,6 +11,9 @@ result honestly is a central outcome of the project.
 
 **Research only · no clinical use · no patient data or trained weights included.**
 
+[Open the interactive website](https://aledeniiz.github.io/Cancer_mama_Jacinto/)
+· [Go to the multimodal comparison](https://aledeniiz.github.io/Cancer_mama_Jacinto/#multimodal)
+
 ![Image and clinical architecture](web/assets/pipeline.svg)
 
 ## Evidence at a glance
@@ -197,8 +200,9 @@ The source project's **CC BY 4.0** license is preserved in [LICENSE](LICENSE).
 See [NOTICE.md](NOTICE.md) for attribution and changes, and
 [redistribution decisions](docs/redistribution.md) for the separate data and
 asset terms. No UAX template/logo or presentation is included because its
-redistribution rights were not established. The original Git history is not
-included because it may contain private records.
+redistribution rights were not established. No private local experiment history
+was copied. The existing public repository retains its earlier commits; legacy
+records were removed from the current tree, not purged from historical commits.
 
 Fridman, N. et al. *BreastDCEDL: A standardized deep learning-ready breast
 DCE-MRI dataset of 2,070 patients*. Scientific Data 13, 264 (2026).

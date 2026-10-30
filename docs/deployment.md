@@ -24,11 +24,20 @@ The full local suite currently contains 19 tests: 16 core checks and 3 checks of
 the exact static deployment artifact. No ML dependency installation is needed in
 the Pages workflow itself.
 
-After a successful deployment the expected website address is
-`https://aledeniiz.github.io/Cancer_mama_Jacinto/`.
-This address is not evidence that deployment has completed: check the successful
-Actions run and the actual HTTPS response. The Actions deployment output is the
-authoritative URL.
+## Verified publication
+
+The website was published and verified on **30 October 2026**:
+[https://aledeniiz.github.io/Cancer_mama_Jacinto/](https://aledeniiz.github.io/Cancer_mama_Jacinto/).
+The [first deployment run](https://github.com/aledeniiz/Cancer_mama_Jacinto/actions/runs/41036915754)
+completed successfully. An independent HTTPS fetch returned 200 and matched the
+reviewed HTML byte-for-byte. Browser checks confirmed the multimodal comparison,
+clinical AUC 0.6450, six disabled private-resource upload controls and no console
+errors during that check.
+
+HTML SHA-256: `4def168a02ba74e91ba79645baa408a7bc0ef215519be7a5467bb7e0e27f6e35`.
+The same URL is linked in the repository's About section. Future deployments
+must be checked through their Actions run and actual HTTPS response; the Actions
+deployment output is the authoritative URL.
 
 ## Local artifact verification
 

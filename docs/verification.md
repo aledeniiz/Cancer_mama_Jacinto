@@ -59,8 +59,10 @@ no matches; the identifier list and private scan inputs are not distributed.
 The sanitized presentation payload has zero patient rows, no learned normalizer
 values and no calibration bins. Aggregate ROC/PR coordinates contain no score
 thresholds. No real weights, clinical coefficients, fitted statistics, individual
-OOF/TEST rows, institutional deck, source medical image, credential or original
-Git history is included. Artificial test constants are not learned parameters.
+OOF/TEST rows, institutional deck, source medical image, credential or private
+local experiment history is included in the reviewed release tree. Existing
+public commits are preserved; old records were not purged from that history.
+Artificial test constants are not learned parameters.
 
 These are bounded checks, not a proof against every possible secret or privacy
 attack. Rights review and future additions still require human review. The code

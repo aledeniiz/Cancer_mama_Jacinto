@@ -11,7 +11,7 @@
 | UAX template, logo and final presentation | Excluded; redistribution permission not established |
 | Publisher figures/PDF | Excluded; no permission to adapt or republish assumed |
 | Third-party fonts, private HTML, screenshots, logs, backups | Excluded; unnecessary or rights/private-content uncertainty |
-| Original Git history | Excluded; historical commits may contain private tables |
+| Private local experiment history | Not copied; the existing public repository retains its earlier commits |
 
 Source software declares [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 The source dataset [Zenodo record](https://zenodo.org/records/18114231) declares

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "note": "Reviewed LF-normalized release files, excluding this manifest and VCS storage.",
+  "note": "Reviewed current release files; excludes this manifest and VCS internals.",
   "files": [
     {
       "path": ".gitattributes",
@@ -29,8 +29,8 @@
     },
     {
       "path": "docs/deployment.md",
-      "size": 2313,
-      "sha256": "549eb207bfe22662e4885b778e4f742d05f42430b885587be12f560fd7f428fe"
+      "size": 2865,
+      "sha256": "ab40d66fabbb083e36b2bccfbb96d40f9f8f7a5baded24ef55360e5520097844"
     },
     {
       "path": "docs/limitations.md",
@@ -49,13 +49,13 @@
     },
     {
       "path": "docs/redistribution.md",
-      "size": 2348,
-      "sha256": "b27b0398d8f9593e6cecaa582b57f1825f7b82080cb40f70006f53ebed594318"
+      "size": 2375,
+      "sha256": "a64bb1c5bfd9a3428f878af67699f502eee6519886b4ab61bea6ce473e026884"
     },
     {
       "path": "docs/release-report.md",
-      "size": 2552,
-      "sha256": "1e8d1adbb740704537b7df935a6c07adb6bc245d4e7a4bba2b898ede306c9b82"
+      "size": 2566,
+      "sha256": "e2406e02592b8a658ed24a1153284ed433701cbdab01157166d99d740099fac4"
     },
     {
       "path": "docs/tested-environment.json",
@@ -64,8 +64,8 @@
     },
     {
       "path": "docs/verification.md",
-      "size": 5141,
-      "sha256": "dd8138108c2114f8f94e0135e58260e84f44ce32c76d873890e283e8e5c517de"
+      "size": 5268,
+      "sha256": "0e37e5048c8312d99e2a82c0d35a2b30b63be725ca30038d1c8be10e3d1b5835"
     },
     {
       "path": "examples/README.md",
@@ -99,8 +99,8 @@
     },
     {
       "path": "README.md",
-      "size": 10254,
-      "sha256": "74f97b939104bc9a240a9ebb1e58301161ca9bede6b531069ecc5b01496b3178"
+      "size": 10548,
+      "sha256": "2ef49ca5d6a75606d6d66f0f3e692e92ea42090ab6f06815f46883a5f8b47efe"
     },
     {
       "path": "requirements.txt",

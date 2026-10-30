@@ -13,7 +13,7 @@ privacy-reviewed export of the existing design, not a redesigned replacement.
 
 Medical images, image caches, clinical tables, labels and identifiers,
 patient-level predictions and splits, all trained weights and fitted
-normalizers, historical Git data, virtual environments, bytecode/caches, private
+normalizers, private local experiment Git data, virtual environments, bytecode/caches, private
 reports/logs, credentials, backups, publisher figures and UAX presentations/
 branding. The original working project and verified backups were preserved.
 
