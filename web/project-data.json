@@ -7760,16 +7760,16 @@
     "available": false,
     "means": [],
     "std": [],
-    "reason": "Transformadores incluidos en los artefactos de modelos; no cargados en este visor estático."
+    "reason": "El visor conceptual no aplica estadísticas; la inferencia real utiliza las originales de inference-assets/model-config.json."
   },
   "public_export": true,
   "provenance": {
-    "scope": "Vista web estática de la plataforma original; pesos, metadatos y predicciones están disponibles por separado en el repositorio.",
+    "scope": "Plataforma pública con inferencia CNN EMA y fusión en el navegador; los registros OOF permanecen fuera de la página.",
     "aggregate_source": "results/study.json",
     "images": "Ilustraciones procedimentales sintéticas; ninguna imagen de paciente distribuida.",
     "individual_predictions": "Incluidas en evaluation/ para análisis local; no cargadas en esta página.",
     "clinical_models": "Cinco evaluadores clínicos OOF distribuidos como artefactos separados; no son un modelo clínico global.",
-    "final_multimodal": "Cabeza final distribuida como artefacto separado, sin evaluación independiente propia.",
+    "final_multimodal": "Cabeza final ejecutable con ONNX en el navegador, sin evaluación independiente propia.",
     "calibration": "No incorporada al bundle web estático; consultar los archivos de evaluación para análisis local.",
     "curves": "project-data.json · trayectoria EMA agregada de 15 épocas",
     "predictions": "project-data.json contiene las métricas agregadas; evaluation/ contiene las predicciones descargables."

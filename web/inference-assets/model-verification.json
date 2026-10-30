@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "new_training": false,
+  "quantization": false,
+  "real_mri_patient_checked": true,
+  "probability_tolerance": 1e-05,
+  "embedding_tolerance": 1e-05,
+  "fixtures": [
+    {
+      "fixture": "synthetic_three_cuts",
+      "slices": 3,
+      "embedding_max_absolute_error": 6.67572021484375e-06,
+      "sequential_embedding_max_absolute_error": 6.67572021484375e-06,
+      "cnn_probability_absolute_error": 1.1920928955078125e-07,
+      "fusion_probability_absolute_error": 0.0
+    },
+    {
+      "fixture": "synthetic_missing_clinical",
+      "slices": 2,
+      "embedding_max_absolute_error": 5.7220458984375e-06,
+      "sequential_embedding_max_absolute_error": 5.7220458984375e-06,
+      "cnn_probability_absolute_error": 8.940696716308594e-08,
+      "fusion_probability_absolute_error": 0.0
+    },
+    {
+      "fixture": "public_case_real_mri_patient",
+      "slices": 10,
+      "embedding_max_absolute_error": 9.5367431640625e-07,
+      "sequential_embedding_max_absolute_error": 9.5367431640625e-07,
+      "cnn_probability_absolute_error": 8.940696716308594e-08,
+      "fusion_probability_absolute_error": 2.9802322387695312e-08
+    }
+  ],
+  "runtime": {
+    "python": "3.11.0",
+    "torch": "2.10.0+cpu",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1"
+  },
+  "limits": "Conversion and inference parity only; no new scientific validation. Browser WASM/PNG decoder must also be checked independently."
+}

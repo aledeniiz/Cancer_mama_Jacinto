@@ -1,0 +1,36 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "model-cnn-ema.onnx",
+      "size": 104596,
+      "sha256": "d641e470f0b790cd674a0d68033d967231958dc2de2d0cef0916787ba2f7154c"
+    },
+    {
+      "path": "model-classifier.onnx",
+      "size": 481,
+      "sha256": "fd4fe45033b53f2df4a745ccfd4f6910c69e44935d4577617162ad1e2cbb5039"
+    },
+    {
+      "path": "model-fusion.onnx",
+      "size": 6637,
+      "sha256": "79ea007628db4bca8d560266881af20d229e492f2a3862f5059ec7c8dddb55a0"
+    },
+    {
+      "path": "model-config.json",
+      "size": 7066,
+      "sha256": "1ca435005261ea913c1d0576330c56d20ea3b8ee7043560a41be854948a35bda"
+    },
+    {
+      "path": "model-verification.json",
+      "size": 1435,
+      "sha256": "a1b33e675457afad3a82806b152b1fcf7477e9b3ed8980bd8d7834abf4bc0c76"
+    },
+    {
+      "path": "model-README.md",
+      "size": 1260,
+      "sha256": "76cfe3c3b14f7401c700ab2f2a5c68d5d59b8f5c3f4445e65a2a5b3c5ad1e9cc"
+    }
+  ],
+  "note": "Excludes itself; MRI fixtures and local paths are never published."
+}

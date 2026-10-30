@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "browser_backend": "ONNX Runtime Web 1.31.1 WASM CPU single-thread",
+  "actual_browser_cases": 4,
+  "cases": [
+    {
+      "mode": "image",
+      "slices": 1,
+      "clinical": null,
+      "absolute_probability_error": 2.0777825238127434e-08
+    },
+    {
+      "mode": "image",
+      "slices": 10,
+      "clinical": null,
+      "absolute_probability_error": 1.373811175930939e-09
+    },
+    {
+      "mode": "fusion",
+      "slices": 10,
+      "clinical": "age48-HR1",
+      "absolute_probability_error": 1.3982766611242425e-09
+    },
+    {
+      "mode": "fusion",
+      "slices": 10,
+      "clinical": "missing",
+      "absolute_probability_error": 2.6573865427592658e-08
+    }
+  ],
+  "max_absolute_probability_error": 2.6573865427592658e-08,
+  "patient_scores_distributed": false,
+  "private_images_distributed": false,
+  "mismatched_phases_blocked": true,
+  "rgb_rejected": true,
+  "input_changes_invalidated_result": true,
+  "clear_removed_results": true,
+  "invalid_png_preview_hidden": true,
+  "mobile_390_no_horizontal_overflow": true,
+  "console_errors": 0,
+  "python_tests_passed": 28,
+  "new_training": false,
+  "clinical_validation_claimed": false
+}

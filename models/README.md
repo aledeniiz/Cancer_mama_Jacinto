@@ -25,3 +25,6 @@ comprobación de referencias con una nueva validación independiente.
 El runtime probado utiliza PyTorch 2.10.0; el entrenamiento histórico usó 2.5.1.
 Las verificaciones distinguen tensores exactamente conservados de las tolerancias
 numéricas de inferencia. No se promete repetición bit a bit del entrenamiento GPU.
+
+Para ejecutar CNN EMA y fusión sin Python, la web incorpora grafos ONNX preservados;
+consulta [inferencia en navegador](../docs/browser-inference.md).

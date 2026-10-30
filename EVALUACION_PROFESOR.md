@@ -38,13 +38,17 @@ tampoco dispone de una estimación independiente de rendimiento.
 
 ## Demostración con pacientes nuevos
 
-GitHub Pages es una presentación estática: no ejecuta Python ni permite inferencia
-real con los archivos de un paciente. Para la prueba práctica de la guía docente
-se necesita ejecutar el pipeline de inferencia con los pesos y el preprocesamiento
-originales en un entorno con backend. La existencia de esta web pública no acredita
-por sí sola ese requisito de despliegue. Los comandos locales y sus contratos se
-describen en `examples/README.md`; no se deben reemplazar las predicciones por
-simulaciones ni ajustar el modelo con los casos privados del profesor.
+La web pública ejecuta ahora la CNN EMA y la fusión en el navegador mediante ONNX
+Runtime Web, sin servidor Python. El profesor puede seleccionar las tres fases
+PRE/EARLY/LATE compatibles, comprobar sus cortes y obtener la predicción real.
+En fusión puede añadir edad y HR o permitir su imputación original. No necesita
+cuenta ni instalación. Las imágenes y variables clínicas permanecen en su dispositivo.
+
+La primera ejecución descarga los modelos. Se admiten PNG grises de 8 bits,
+256 × 256, con igual número de cortes por fase (1–64). No se convierte una imagen
+arbitraria al formato del estudio. Consultar [instrucciones y equivalencia](docs/browser-inference.md).
+Esta equivalencia técnica no demuestra generalización a la validación privada;
+no deben ajustarse pesos ni transformadores con esos pacientes.
 
 ## Datos y licencias
 

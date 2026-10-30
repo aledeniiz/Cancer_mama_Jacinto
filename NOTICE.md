@@ -36,3 +36,7 @@ The student's final academic presentation is included with institutional brandin
 preserved; third-party marks/assets are not relicensed by the code LICENSE.
 No endorsement by UAX, dataset authors,
 source cohorts or clinical institutions is implied.
+
+The browser inference runtime is Microsoft ONNX Runtime Web 1.31.1, redistributed
+under its separate MIT license and third-party notices in web/inference-assets/.
+The source-project CC license does not replace those component licenses.

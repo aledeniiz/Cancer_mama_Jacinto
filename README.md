@@ -81,10 +81,10 @@ python -B scripts/serve_web.py --port 8877
 ```
 
 Abrir `http://127.0.0.1:8877/web/`. Se conserva el diseño de la plataforma terminada.
-GitHub Pages sirve una **demostración estática**: no ejecuta Python ni inferencia
-real sobre pacientes. Los controles correspondientes están desactivados de forma
-explícita. Los pesos y referencias se descargan desde el repositorio, no se
-incrustan en la página. Consulte [el contrato de exportación](web/PUBLIC_EXPORT.md)
+GitHub Pages ejecuta ahora la **CNN EMA y la fusión en el navegador**, sin servidor
+Python ni cuota mensual. Seleccionar PRE/EARLY/LATE compatibles y confirmar los
+cortes en IA en directo o IA multimodal. Los modelos se descargan; las imágenes y
+variables clínicas se procesan localmente. Véase [inferir desde la web](docs/browser-inference.md). Consulte [el contrato de exportación](web/PUBLIC_EXPORT.md)
 y [el despliegue](docs/deployment.md).
 
 Para inferencia local, consultar `--help` de `scripts/infer_cnn.py`,

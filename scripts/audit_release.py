@@ -4,7 +4,7 @@ import argparse, hashlib, json, re
 
 ROOT=Path(__file__).resolve().parents[1]
 FORBIDDEN_EXT={'.pyc','.pyo','.pt','.pth','.ckpt','.npz','.npy','.pkl','.pickle','.joblib',
-    '.csv','.tsv','.parquet','.dcm','.nii','.h5','.hdf5','.pptx','.pdf','.zip','.tar','.7z'}
+    '.csv','.tsv','.parquet','.dcm','.nii','.h5','.hdf5','.pptx','.pdf','.zip','.tar','.7z','.onnx','.wasm'}
 FORBIDDEN_DIR={'.git','.venv','venv','__pycache__','.pytest_cache','node_modules','backups','private','datasets','data'}
 PATTERNS={
     'windows_local_path':re.compile(r'(?<![A-Za-z0-9])[A-Za-z]:[\\/](?:Users|home|tmp|workspace)[\\/]',re.I),
@@ -26,7 +26,7 @@ def audit():
             entries=json.loads(allowlist_path.read_text(encoding='utf-8'))['files']
             for entry in entries:
                 rel=entry['path'];parts=Path(rel).parts
-                if (not rel.startswith(('evaluation/','models/trained/','presentation/')) or
+                if (not rel.startswith(('evaluation/','models/trained/','presentation/','web/inference-assets/')) or
                     '..' in parts or Path(rel).is_absolute() or rel in allowed or
                     not re.fullmatch('[0-9a-f]{64}',entry['sha256']) or
                     not isinstance(entry['size'],int) or entry['size']<0):
@@ -48,7 +48,7 @@ def audit():
             findings.append({'path':rel,'rule':'reviewed_artifact_changed'})
         if any(x in FORBIDDEN_DIR or x.endswith('.egg-info') for x in relative.parts):
             findings.append({'path':rel,'rule':'excluded_directory'})
-        allowed_type=reviewed and p.suffix.lower() in {'.csv','.npz','.pptx','.pdf'}
+        allowed_type=reviewed and p.suffix.lower() in {'.csv','.npz','.pptx','.pdf','.onnx','.wasm'}
         if (p.suffix.lower() in FORBIDDEN_EXT and not allowed_type) or p.name=='.env' or p.name.startswith('.env.'):
             findings.append({'path':rel,'rule':'excluded_file_type'})
         if len(content)>2*1024*1024 and not reviewed:findings.append({'path':rel,'rule':'large_file_requires_review'})
@@ -60,7 +60,11 @@ def audit():
             # Only exact reviewed public-case scientific files may contain IDs.
             # Credential/path checks still apply to all decoded text.
             if reviewed and rule=='medical_case_identifier':continue
-            if pattern.search(text):findings.append({'path':rel,'rule':rule})
+            candidate=text
+            if reviewed and rel=='web/inference-assets/ort-wasm-simd-threaded.mjs' and rule=='unix_local_path':
+                # Official Emscripten virtual HOME; not a workstation path.
+                candidate=candidate.replace('/home/'+'web_user','/emscripten-virtual-home')
+            if pattern.search(candidate):findings.append({'path':rel,'rule':rule})
         items.append({'path':rel,'size':len(content),'sha256':sha})
         if content:groups.setdefault(sha,[]).append(rel)
     duplicates=[v for v in groups.values() if len(v)>1]

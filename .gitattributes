@@ -16,4 +16,7 @@ presentation/** -text
 *.npz binary
 *.pptx binary
 *.pdf binary
+web/inference-assets/** -text
+*.onnx binary
+*.wasm binary
 

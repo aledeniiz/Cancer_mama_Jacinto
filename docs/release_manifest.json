@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "note": "Reviewed tracked release files; excludes this manifest and VCS internals. Ignored local diagnostics are not delivered.",
+  "note": "Reviewed tracked release files, excluding this manifest; browser assets have their own deployment manifest.",
   "files": [
     {
       "path": ".gitattributes",
-      "size": 377,
-      "sha256": "6442655f552c64ebfe86e768d4d13d82d91ecf97afeaef5e9cbdfd92c60fc10a"
+      "size": 435,
+      "sha256": "a4ff2c56b3ba16e3c500baf86bae2b3af458939f7c22331aa37640179c66b682"
     },
     {
       "path": ".github/workflows/pages.yml",
@@ -19,8 +19,8 @@
     },
     {
       "path": "EVALUACION_PROFESOR.md",
-      "size": 3002,
-      "sha256": "ef2c22a39a397548222957779f13d6320f6c3259687d11d4ef94f1d3e8a4a1ae"
+      "size": 3264,
+      "sha256": "31ba92b0f738b7da9c4b852e0ee61ef59605c38c0258ac201432104cb65d55d5"
     },
     {
       "path": "LICENSE",
@@ -29,18 +29,28 @@
     },
     {
       "path": "NOTICE.md",
-      "size": 2259,
-      "sha256": "0d75c8f49226d70355445ae757b6b2ce42beba3f4cb5011db7e7a45ca7ce797c"
+      "size": 2496,
+      "sha256": "b04661dd834b9c2df4b0b74fedf9aed351960e5f5b080efa8bbc8ed10c5ee83f"
     },
     {
       "path": "README.md",
-      "size": 6209,
-      "sha256": "27d5a353c0d6e8b3b294f2d1955aa91dfb7b33cb037bb3c6b87cfb021900b80c"
+      "size": 6291,
+      "sha256": "1c9d963348d6844d0cc19e86eee58c3b34fe805f1e686c6a8b2b64ffeabf6e56"
     },
     {
       "path": "configs/compact_recipe.json",
       "size": 687,
       "sha256": "d7c7945967b7dcf9913af24ea30f37a42b7092191d91fb692b4fef052c1a3913"
+    },
+    {
+      "path": "docs/browser-inference.md",
+      "size": 3242,
+      "sha256": "88aa63a3204db35f66b6c1c8e353221251c0397eb23332b2f8fbd49d4e4db0cf"
+    },
+    {
+      "path": "docs/browser-verification.json",
+      "size": 1188,
+      "sha256": "9de26e7cc8e9ac4e18dca8274eecf4f47e05343d3c2957c190aa6fe31b61e3e6"
     },
     {
       "path": "docs/datasets.md",
@@ -49,8 +59,8 @@
     },
     {
       "path": "docs/deployment.md",
-      "size": 3413,
-      "sha256": "577e0a636d92a22b87cc2798a35ee14045da0f0ec48877775d8887309309b3eb"
+      "size": 1455,
+      "sha256": "58b62f004b22cb83b5b96bcd783a27a577b1e489bb850528f16f71ae4ac9cb24"
     },
     {
       "path": "docs/limitations.md",
@@ -74,8 +84,8 @@
     },
     {
       "path": "docs/release-report.md",
-      "size": 1339,
-      "sha256": "6869b384425f0959b0224280689dff91519846c04f50c7bd2d3ab9c8467fed06"
+      "size": 1488,
+      "sha256": "c264c3751d33141ee5f3f299e0e3b257cb477adaca56fecce990f2eb2afe8c1c"
     },
     {
       "path": "docs/scientific-verification.json",
@@ -84,8 +94,8 @@
     },
     {
       "path": "docs/scientific_artifact_allowlist.json",
-      "size": 15943,
-      "sha256": "bdf46d28235dbaeae31ec8087acc86fcd9e2ff4cd1120d79a76a6d1537cbf465"
+      "size": 18397,
+      "sha256": "604360623e507f4aa18bbe0840f793bfaf37a765058f9ff47f6c0d4a4e86c756"
     },
     {
       "path": "docs/tested-environment.json",
@@ -94,8 +104,8 @@
     },
     {
       "path": "docs/verification.md",
-      "size": 4355,
-      "sha256": "3b61a44a313da39f39f72e2af12ec4b52c3077d4863ff1003196baf19f5f6f05"
+      "size": 4850,
+      "sha256": "3fb5bc6597970ce4ea73c90c725851aab453eea2876f4980727e2ce35515e4d7"
     },
     {
       "path": "evaluation/LICENSE.md",
@@ -304,8 +314,8 @@
     },
     {
       "path": "models/README.md",
-      "size": 1716,
-      "sha256": "1e12e02c5222d39dd517667732829630e34a21d8ebbea6190560b285d59d19c2"
+      "size": 1869,
+      "sha256": "e6bed8952d41e3ffa202b3ce6f314c2197267bb6f81cbaf5dfe5c3aeb22b78eb"
     },
     {
       "path": "models/SOURCE_PROVENANCE.json",
@@ -594,8 +604,8 @@
     },
     {
       "path": "scripts/audit_release.py",
-      "size": 5612,
-      "sha256": "c90bf84ae1c1e333ad07641ec66b3fbc1a5b2b8e1d50d67c867a58697cc30fda"
+      "size": 5980,
+      "sha256": "768c83a3c30e1a15c6609de23b47e4eb70628fc270ee667bf74230ee0d9cb71f"
     },
     {
       "path": "scripts/average_checkpoints.py",
@@ -604,13 +614,18 @@
     },
     {
       "path": "scripts/build_pages.py",
-      "size": 3453,
-      "sha256": "a67768fd8db510d89b4cf4cb6d020231860c0dded05b1cd5891179c565df2f50"
+      "size": 4926,
+      "sha256": "53ebd288a1b93389e81beeac40a8b600e2d87b0809829f45af9e43ed2318ae4b"
     },
     {
       "path": "scripts/evaluate.py",
       "size": 1493,
       "sha256": "a47916f8184569dcd7e313178f3561c449e336fac6ce522d3747a531035a8037"
+    },
+    {
+      "path": "scripts/export_browser_models.py",
+      "size": 13252,
+      "sha256": "c3e51acc9bf181a09dfa262424b2e038d89b54ce580f5c0f6e257fd96fa4eb36"
     },
     {
       "path": "scripts/extract_embeddings.py",
@@ -713,14 +728,24 @@
       "sha256": "bed44c69da3f4343316682e6dc59b3db0cdd8307643c46ba0bea615310c2351c"
     },
     {
+      "path": "tests/browser_png.cjs",
+      "size": 1225,
+      "sha256": "f85956415fa45dced71c940918436a8c0241b4dbb6d181e94463268a5371c381"
+    },
+    {
+      "path": "tests/test_browser_inference.py",
+      "size": 2127,
+      "sha256": "015cc497b152c4184ef0bab83c13d2d893c1e774b438bf1c045de1fcf1897e62"
+    },
+    {
       "path": "tests/test_core.py",
       "size": 13336,
       "sha256": "ea73e296d17d2107ba6d00016218aa9079fb877aef7e9af71f14c059c51bf94c"
     },
     {
       "path": "tests/test_pages.py",
-      "size": 1289,
-      "sha256": "cb09c5f265f0319f03f2552548aa901170892bf62887da30cd8c04e5cdf55a6e"
+      "size": 2785,
+      "sha256": "0bae5fd7c3562b6a44b4308f3daff12e8d965fdf2df1afea1e51035f2575adf0"
     },
     {
       "path": "tests/test_release_review.py",
@@ -734,8 +759,8 @@
     },
     {
       "path": "web/PUBLIC_EXPORT.md",
-      "size": 4858,
-      "sha256": "84844ed143b567a774117fae8c2695fefcdd7f52cb5fd45491175d1588665dec"
+      "size": 1425,
+      "sha256": "ec2096528f60961745542cb366eb51f597810ab17a4fc43ac054ef1c0641c8ec"
     },
     {
       "path": "web/app.js",
@@ -748,9 +773,14 @@
       "sha256": "3f7eaab3745eba1001ee108f4d2bef89270d06d87639673cd47fbce977266982"
     },
     {
+      "path": "web/browser-inference.js",
+      "size": 12381,
+      "sha256": "8d95de9238023023436cfb3e22159c69767414d0979c5de38176c3784835b9f1"
+    },
+    {
       "path": "web/build_public.py",
-      "size": 2366,
-      "sha256": "b2add2d6bc1fbbd5ee0006894b9abdcab2b1be0cd24d849ed8cb94b2153dae73"
+      "size": 2390,
+      "sha256": "04d26c22bbd862db9679e8ccb436728f0242f44db4a71d54aa7d03d95f6c9228"
     },
     {
       "path": "web/cinematic.css",
@@ -769,13 +799,83 @@
     },
     {
       "path": "web/dual-model.js",
-      "size": 6365,
-      "sha256": "f07952acda9efd0a87b4cf842d592420d0e50a92e794bf96131698f844ffe122"
+      "size": 6382,
+      "sha256": "b0df22028902576358fb43bf69e5a198b4069942940806997c86974015391c4c"
     },
     {
       "path": "web/index.html",
-      "size": 649603,
-      "sha256": "2cc599c983d1431bea6feb789d224af8e6ec6b2f866c87958a2c556ab8e9e478"
+      "size": 667885,
+      "sha256": "e94963ff6a99846d37238a588ad4b10088bcefd44cf326065b4fb01fe47a8b9f"
+    },
+    {
+      "path": "web/inference-assets/ORT_LICENSE.txt",
+      "size": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    {
+      "path": "web/inference-assets/ORT_ThirdPartyNotices.txt",
+      "size": 338088,
+      "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"
+    },
+    {
+      "path": "web/inference-assets/asset-manifest.json",
+      "size": 1742,
+      "sha256": "cb1be17fa3882d4cd7cc1db3e086cc5cb9cc15335034386214755ac829d6d166"
+    },
+    {
+      "path": "web/inference-assets/model-README.md",
+      "size": 1260,
+      "sha256": "76cfe3c3b14f7401c700ab2f2a5c68d5d59b8f5c3f4445e65a2a5b3c5ad1e9cc"
+    },
+    {
+      "path": "web/inference-assets/model-classifier.onnx",
+      "size": 481,
+      "sha256": "fd4fe45033b53f2df4a745ccfd4f6910c69e44935d4577617162ad1e2cbb5039"
+    },
+    {
+      "path": "web/inference-assets/model-cnn-ema.onnx",
+      "size": 104596,
+      "sha256": "d641e470f0b790cd674a0d68033d967231958dc2de2d0cef0916787ba2f7154c"
+    },
+    {
+      "path": "web/inference-assets/model-config.json",
+      "size": 7066,
+      "sha256": "1ca435005261ea913c1d0576330c56d20ea3b8ee7043560a41be854948a35bda"
+    },
+    {
+      "path": "web/inference-assets/model-fusion.onnx",
+      "size": 6637,
+      "sha256": "79ea007628db4bca8d560266881af20d229e492f2a3862f5059ec7c8dddb55a0"
+    },
+    {
+      "path": "web/inference-assets/model-manifest.json",
+      "size": 1031,
+      "sha256": "f7e91544c46580d0091370230303562d14dbc81e2cb981850d276cf2e6acd8f7"
+    },
+    {
+      "path": "web/inference-assets/model-verification.json",
+      "size": 1435,
+      "sha256": "a1b33e675457afad3a82806b152b1fcf7477e9b3ed8980bd8d7834abf4bc0c76"
+    },
+    {
+      "path": "web/inference-assets/ort-wasm-simd-threaded.mjs",
+      "size": 24738,
+      "sha256": "30ed0b5cd1182ede931fea448afb567d4dc705ec957af09f108a2be5f770dac3"
+    },
+    {
+      "path": "web/inference-assets/ort-wasm-simd-threaded.wasm",
+      "size": 14848852,
+      "sha256": "4b884c203b0fa48d057be3332c65513ff85aa3c5bddd6946acc0fab7ecda001d"
+    },
+    {
+      "path": "web/inference-assets/ort.min.js",
+      "size": 53796,
+      "sha256": "b8a78c408c40da65fdc8ba0846f7b2948e92a4c6d6b23cc8e4165e428ad95443"
+    },
+    {
+      "path": "web/inference-assets/runtime-provenance.json",
+      "size": 1477,
+      "sha256": "849e0898dd18458a54fd1e9ef84814e329d284da85348588e50a2f1d2207cc49"
     },
     {
       "path": "web/lab.html",
@@ -789,18 +889,18 @@
     },
     {
       "path": "web/live.html",
-      "size": 6351,
-      "sha256": "a86b1f6254a400060a8d4049ab85764bb8fb21168914c0a9aa63e16ff00447a3"
+      "size": 6395,
+      "sha256": "286cde1588210f33f1b4d65191b43c4e3dd98bef0935b1bcf431e66f76d9cb1f"
     },
     {
       "path": "web/live.js",
-      "size": 2008,
-      "sha256": "fd70e719ab61ada7f720d68279a6540033a6b21ab2978f9a8ef87dd4fd8e36ae"
+      "size": 5501,
+      "sha256": "79f7669e4f5b112d05ba210f448f28c6ad9ad561412d7b4e5b75bfd11c249fb4"
     },
     {
       "path": "web/multimodal-public.json",
-      "size": 556027,
-      "sha256": "006edcfbd8c03e5e0cc6a304227a564b83062ba3ddb86b6d6c76e56b2781a578"
+      "size": 556031,
+      "sha256": "f8083fc36005ac65a51cf9461107f126e54f6d0eab90eaf7d9e525db69deff83"
     },
     {
       "path": "web/multimodal.css",
@@ -809,13 +909,13 @@
     },
     {
       "path": "web/multimodal.html",
-      "size": 7071,
-      "sha256": "ce2593776b53e5e361333da4c684a706a0387dad46af6cc6009c62cbdd8d13d3"
+      "size": 7149,
+      "sha256": "9b95ed7a813ea358c75e55e7e876a1b0b4ec075d652c744d63d07f3fdeb57e2e"
     },
     {
       "path": "web/multimodal.js",
-      "size": 12470,
-      "sha256": "b0e439aca5ae6ce4178f252377874aa3c66d6a9364eef19aa0533ebe6d2062bd"
+      "size": 14644,
+      "sha256": "151ec86f5b2d37f3c580c6f6cefa2620193d6c6afbdf89da6243803b12eee704"
     },
     {
       "path": "web/premium-charts.css",
@@ -834,18 +934,18 @@
     },
     {
       "path": "web/project-data.json",
-      "size": 192351,
-      "sha256": "f7490c071817a72fd4171889f43a1dd4b4b6af36ebeda077e352b3227d9ab75d"
+      "size": 192375,
+      "sha256": "b290c0adc64c1f56f1f1682f1d882fc2c85aa3683dad91cbdf30d7ca402a5cc5"
     },
     {
       "path": "web/shell.html",
-      "size": 34462,
-      "sha256": "a7a7a0da081e66ef336d4a61ec95ff4bf26b2665cb70d58d0344a5a0df82bf6e"
+      "size": 34514,
+      "sha256": "652db4376cd71075e08c8c87a44f6a97557bfe7f50fbb275253b16692949384d"
     },
     {
       "path": "web/source-provenance.json",
-      "size": 3526,
-      "sha256": "6b115793bc02ffa44a1a3f687aad3d6a2c3cf5199ba74b1aec541584f073a96b"
+      "size": 3791,
+      "sha256": "f983621a48f62e850c3f0b2edd21982019b6aecdc0d215638e290c044adfeda0"
     }
   ]
 }

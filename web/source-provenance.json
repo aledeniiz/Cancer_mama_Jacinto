@@ -80,14 +80,18 @@
   },
   "originals_modified": false,
   "sensitive_patient_records_copied": 0,
-  "weights_copied": 0,
-  "learned_normalizers_copied": 0,
   "medical_images_copied": 0,
   "calibration_bins_copied": 0,
   "score_thresholds_in_roc_copied": 0,
-  "public_inference_available": false,
   "procedural_graphics": "Original educational canvases retained; these are explicitly synthetic, not patient images or model activations.",
-  "scope": "This provenance file describes the static browser bundle only. Repository model/evaluation artifacts are distributed separately in models/trained and evaluation.",
-  "repository_model_and_evaluation_artifacts": "Distributed separately; not embedded or loaded by the browser.",
-  "mri_images_distributed": false
+  "scope": "Finished platform preserved with browser-only ONNX inference. No MRI images or individual evaluation records are distributed through Pages.",
+  "repository_model_and_evaluation_artifacts": "Source inference bundles in models/trained; browser graphs and runtime in web/inference-assets; evaluation rows not loaded by the page.",
+  "mri_images_distributed": false,
+  "initial_static_export": {
+    "weights_copied": 0,
+    "learned_normalizers_copied": 0,
+    "public_inference_available": false
+  },
+  "public_inference_available": true,
+  "browser_inference": "Three ONNX graphs exported from original CNN EMA and final fusion; original fitted transforms; no retraining."
 }

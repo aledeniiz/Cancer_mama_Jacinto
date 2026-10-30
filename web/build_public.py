@@ -28,7 +28,7 @@ def render():
     page = page.replace("__LABJS__", read("lab.js"))
     page = page.replace('<section id="interpretation">', read("multimodal.html") + '<section id="interpretation">')
     page = page.replace("</body>", '<script id="multimodal-public-data" type="application/json">' + public_json("multimodal-public.json") + "</script></body>")
-    for name in ["cinematic.js", "live.js", "premium-ui.js", "multimodal.js", "dual-model.js"]:
+    for name in ["browser-inference.js", "cinematic.js", "live.js", "premium-ui.js", "multimodal.js", "dual-model.js"]:
         page = page.replace("</body>", "<script>" + read(name) + "</script></body>")
     return page
 

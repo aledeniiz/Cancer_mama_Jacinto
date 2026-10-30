@@ -4,9 +4,33 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import shutil
 from html.parser import HTMLParser
 
 ROOT = Path(__file__).resolve().parents[1]
+DEPLOYED_ASSETS = frozenset({
+    'ort.min.js', 'ort-wasm-simd-threaded.mjs', 'ort-wasm-simd-threaded.wasm',
+    'ORT_LICENSE.txt', 'ORT_ThirdPartyNotices.txt', 'runtime-provenance.json',
+    'model-cnn-ema.onnx', 'model-classifier.onnx', 'model-fusion.onnx', 'model-config.json',
+})
+
+
+def reviewed_assets():
+    directory = ROOT / 'web/inference-assets'
+    manifest_path = directory / 'asset-manifest.json'
+    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+    rows = manifest['files']
+    names = [row['path'] for row in rows]
+    if len(names) != len(set(names)) or set(names) != DEPLOYED_ASSETS:
+        raise ValueError('The browser runtime must contain exactly the reviewed model/runtime assets')
+    for row in rows:
+        path = directory / row['path']
+        if path.is_symlink() or not path.is_file():
+            raise ValueError('Missing or unreviewed browser asset')
+        content = path.read_bytes()
+        if len(content) != row['size'] or hashlib.sha256(content).hexdigest() != row['sha256']:
+            raise ValueError('Browser asset hash/size mismatch: ' + row['path'])
+    return directory, names
 
 
 class DependencyCheck(HTMLParser):
@@ -53,14 +77,18 @@ def stage_pages(output):
     parser.feed(page)
     if parser.external_resources:
         raise ValueError('The reviewed Pages page must be self-contained')
+    asset_directory, asset_names = reviewed_assets()
     output.mkdir(parents=True, exist_ok=False)
     content = source.read_bytes()
     with (output / 'index.html').open('xb') as handle:
         handle.write(content)
     with (output / '.nojekyll').open('xb'):
         pass
+    (output / 'inference-assets').mkdir()
+    for name in asset_names + ['asset-manifest.json']:
+        shutil.copyfile(asset_directory / name, output / 'inference-assets' / name)
     assert (output / 'index.html').read_bytes() == content
-    return {'files': ['index.html', '.nojekyll'], 'index_sha256': hashlib.sha256(content).hexdigest(),
+    return {'files': ['index.html', '.nojekyll'] + ['inference-assets/' + name for name in asset_names + ['asset-manifest.json']], 'index_sha256': hashlib.sha256(content).hexdigest(),
             'index_bytes': len(content), 'private_data_included': False}
 
 

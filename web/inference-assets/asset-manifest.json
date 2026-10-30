@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "runtime_version": "1.31.1",
+  "scope": "Only public trained inference parameters and official ONNX Runtime Web; no patient records or MRI images.",
+  "files": [
+    {
+      "path": "ort.min.js",
+      "size": 53796,
+      "sha256": "b8a78c408c40da65fdc8ba0846f7b2948e92a4c6d6b23cc8e4165e428ad95443"
+    },
+    {
+      "path": "ort-wasm-simd-threaded.mjs",
+      "size": 24738,
+      "sha256": "30ed0b5cd1182ede931fea448afb567d4dc705ec957af09f108a2be5f770dac3"
+    },
+    {
+      "path": "ort-wasm-simd-threaded.wasm",
+      "size": 14848852,
+      "sha256": "4b884c203b0fa48d057be3332c65513ff85aa3c5bddd6946acc0fab7ecda001d"
+    },
+    {
+      "path": "ORT_LICENSE.txt",
+      "size": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    {
+      "path": "ORT_ThirdPartyNotices.txt",
+      "size": 338088,
+      "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"
+    },
+    {
+      "path": "runtime-provenance.json",
+      "size": 1477,
+      "sha256": "849e0898dd18458a54fd1e9ef84814e329d284da85348588e50a2f1d2207cc49"
+    },
+    {
+      "path": "model-cnn-ema.onnx",
+      "size": 104596,
+      "sha256": "d641e470f0b790cd674a0d68033d967231958dc2de2d0cef0916787ba2f7154c"
+    },
+    {
+      "path": "model-classifier.onnx",
+      "size": 481,
+      "sha256": "fd4fe45033b53f2df4a745ccfd4f6910c69e44935d4577617162ad1e2cbb5039"
+    },
+    {
+      "path": "model-fusion.onnx",
+      "size": 6637,
+      "sha256": "79ea007628db4bca8d560266881af20d229e492f2a3862f5059ec7c8dddb55a0"
+    },
+    {
+      "path": "model-config.json",
+      "size": 7066,
+      "sha256": "1ca435005261ea913c1d0576330c56d20ea3b8ee7043560a41be854948a35bda"
+    }
+  ]
+}

@@ -22157,5 +22157,5 @@
     }
   },
   "ready": false,
-  "message": "El repositorio incluye modelos, metadatos y predicciones para análisis local. Esta página estática muestra resultados agregados y no carga modelos ni acepta MRI; las imágenes MRI no se distribuyen."
+  "message": "La CNN EMA y su ampliación multimodal pueden ejecutarse en el navegador. Las imágenes se procesan localmente y no se envían a un servidor. El modelo multimodal final no tiene validación independiente."
 }

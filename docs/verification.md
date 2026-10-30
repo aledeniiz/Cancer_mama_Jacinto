@@ -6,7 +6,7 @@ arquitectura o resultados originales. Se comprobó en Python 3.11 y PyTorch
 
 ## Comprobaciones realizadas
 
-- **25 tests superados**, incluidos los controles originales, el artefacto
+- **28 tests superados**, incluidos los controles originales, el artefacto
   estático de Pages, integridad de la lista permitida y reproducción científica.
 - **17 modelos recargados en 17 procesos independientes**; sus parámetros conservan
   192 tensores exactamente iguales a los originales. Los cinco clínicos preservan
@@ -45,8 +45,8 @@ independiente. No se mezcla su resultado con la CNN EMA del TEST histórico.
 ## Web, entrega y revisión
 
 Se conserva el diseño de la plataforma y la selección visible de tres modelos
-multimodales. El navegador verificó los avisos nuevos, seis cargas desactivadas
-y ausencia de errores de consola durante esa comprobación. El generador comprueba
+multimodales. La revisión inicial verificó seis cargas desactivadas. La actualización posterior
+habilita inferencia local y se comprueba en `docs/browser-verification.json`. El generador comprueba
 que el HTML coincide con sus fuentes. Pages sigue sin ejecutar inferencia Python.
 La presentación final conserva sus cinco diapositivas y sus archivos originales.
 
@@ -72,3 +72,11 @@ Los manifests científicos y de modelos se validan antes del replay. La lista
 `release_manifest.json` recoge los archivos entregados, excluyéndose a sí mismo.
 Cambiar esa lista exige revisar la procedencia, licencia y hashes; no basta con
 desactivar el escáner. El diagnóstico vacío local ignorado no forma parte de la entrega.
+
+## Actualización: inferencia gratuita en el navegador
+
+La limitación anterior de ejecución pública queda resuelta con ONNX Runtime Web:
+CNN EMA y fusión final funcionan en el navegador sin un servidor Python. Se
+conservan los modelos originales; no hubo reentrenamiento. Las entradas no se
+envían a servicios externos. Véanse `docs/browser-inference.md` y los informes
+de equivalencia en `web/inference-assets/`. Los límites científicos permanecen.
