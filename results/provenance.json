@@ -1,0 +1,34 @@
+{
+  "source_project": "Cancer_mama_Jacinto",
+  "source_files": [
+    {
+      "source_relative_path": "reports/multimodal_20261029/results.json",
+      "sha256": "15f7482a71adc3412903e659a0632ba7598266af873506697dfb847b5b00d917",
+      "redistribution": "Only allow-listed aggregate fields; no source file copied"
+    },
+    {
+      "source_relative_path": "reports/compacta_test_20261029/metrics.json",
+      "sha256": "1ceafba81ace7611834b720a52c2dd09607d963c3d9b61dba27157b20e651534",
+      "redistribution": "Only allow-listed aggregate fields; no source file copied"
+    },
+    {
+      "source_relative_path": "reports/curve_search_20261029/summary.json",
+      "sha256": "54464d585e064de5403376b6b196f4507d20fdaf0795678ddc81b9325dd694d6",
+      "redistribution": "Only allow-listed aggregate fields; no source file copied"
+    },
+    {
+      "source_relative_path": "metadata/samples.csv",
+      "sha256": "7ddd0ecc8272e6460211bd63c1479513bf815e3ea518d1b6bafdcd69f9a75c03",
+      "redistribution": "Only allow-listed aggregate fields; no source file copied"
+    },
+    {
+      "source_relative_path": "metadata/patients.csv",
+      "sha256": "ca3b1f8e4d1bc1abf276659bda60520075ace9bd384d623e34d85746ebf50885",
+      "redistribution": "Only allow-listed aggregate fields; no source file copied"
+    }
+  ],
+  "new_training": false,
+  "metric_changes": false,
+  "curve_export": "ROC/PR use only aggregate coordinates; thresholds, predictions and identifiers omitted. Historical epoch BCE is mean patient BCE from original epoch reports; no new experiment.",
+  "validation": "OOF scalar metrics copied exactly; historical TEST AUC recomputed solely as an integrity check; terminal historical BCE matches archived selection summary within 1e-14."
+}

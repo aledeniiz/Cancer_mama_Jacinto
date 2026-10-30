@@ -1,0 +1,90 @@
+{
+  "export_type": "Controlled copy of the finished original platform; not a redesign.",
+  "sources": [
+    {
+      "path": "presentation/shell.html",
+      "sha256": "6ec63fc96579d0d75f0485e4586585a79c6881fd917dd8858e7b01d99e13add2"
+    },
+    {
+      "path": "presentation/lab.html",
+      "sha256": "d096d97f41585066f4d8022e57b8dff197136caf919200460f96609e1dbf7887"
+    },
+    {
+      "path": "presentation/live.html",
+      "sha256": "0d748d66cb577c2dadcac279a802dd44da78c8d2ede09589c0eb9d1566876962"
+    },
+    {
+      "path": "presentation/multimodal.html",
+      "sha256": "046bede2bf590ca86cd514d37078de087d15659de71fbd20b605280e34c412b3"
+    },
+    {
+      "path": "presentation/cinematic.css",
+      "sha256": "8b7f7827d6f7e9648bc5919d4f13e54e4dab9bab4e0423714f1c4131d3fe912b"
+    },
+    {
+      "path": "presentation/premium-charts.css",
+      "sha256": "05e46da5de15c0568af9c7285bcf448e25211839a9cc75baa4645d6450f66953"
+    },
+    {
+      "path": "presentation/premium-lab.css",
+      "sha256": "41e88d69556eeeb5ae97ffb14cb97839cc409e315d1bc3c1a31e7be4342849b8"
+    },
+    {
+      "path": "presentation/multimodal.css",
+      "sha256": "36262d25d22c3d93b5d36e0e256f7be2072e19f6598f3f430411fe707c3c2fbc"
+    },
+    {
+      "path": "presentation/dual-model.css",
+      "sha256": "ead4bf20c28a532bf628712d1546c9d7a486960f2dc37966b59561e84344b889"
+    },
+    {
+      "path": "presentation/lab.js",
+      "sha256": "09b4654a2afc1d67b21d66d858928ca553b3d83f19d3f8b030acb62903c858d9"
+    },
+    {
+      "path": "presentation/premium-ui.js",
+      "sha256": "4f1041237aa68360ab560f4abdc91491969ff0a12ab0a2ff187569d9ed3d77bc"
+    },
+    {
+      "path": "presentation/dual-model.js",
+      "sha256": "a5834c01eb83f973f71885461cebd783808fd79e90b4240abb93e9e9360c9c55"
+    },
+    {
+      "path": "presentation/cinematic.js",
+      "sha256": "1df8906464c7a6ff89cf4cf8c8069d35214057fe9475c74f2b9a9402a2f461b3"
+    },
+    {
+      "path": "presentation/app.js",
+      "sha256": "4580a2d72e90505db8bd079b92aeb8541df37d548e186d52c9e28296cff6ce2a"
+    },
+    {
+      "path": "presentation/multimodal.js",
+      "sha256": "f7413f904f7475c062d617a78846dd64f255433025fe7f044986734c6b3c9de5"
+    },
+    {
+      "path": "presentation/live.js",
+      "sha256": "fbc496557414a22d8570a5c2e9a4a3c618f0fec8777ca6f00bed6f531f2a9a13"
+    },
+    {
+      "path": "presentation/project-data.json",
+      "sha256": "8ce4f83dee52a0d25cbe77bb2a5ed34ba9821d3efbd2939de3e4d424288873e6"
+    },
+    {
+      "path": "presentation/build_html.py",
+      "sha256": "78044d46709e5f5d30868dce8e4812dddcf40e35d8df98439ab918af019ce369"
+    }
+  ],
+  "aggregate_multimodal_source": {
+    "path": "reports/multimodal_20261029/web_results.json",
+    "sha256": "5137665eb1d4add9a7f051670b4c91e4627402f704d13ebc8a71644fbb911b06"
+  },
+  "originals_modified": false,
+  "sensitive_patient_records_copied": 0,
+  "weights_copied": 0,
+  "learned_normalizers_copied": 0,
+  "medical_images_copied": 0,
+  "calibration_bins_copied": 0,
+  "score_thresholds_in_roc_copied": 0,
+  "public_inference_available": false,
+  "procedural_graphics": "Original educational canvases retained; these are explicitly synthetic, not patient images or model activations."
+}

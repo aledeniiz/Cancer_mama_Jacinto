@@ -1,0 +1,19 @@
+{
+  "purpose": "Recipe documentation; no fitted statistics or weights",
+  "channels": [8,16,32,64],
+  "patient_pooling": "mean_embeddings",
+  "dropout": 0.3,
+  "epochs": 15,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "scheduler": "cosine",
+  "patient_batch_size": 8,
+  "train_slices_per_patient": 10,
+  "gradient_clip_norm": 1,
+  "seed": 42,
+  "posthoc_epoch_ema_decay": 0.8,
+  "batchnorm": "recalibrate after parameter EMA on all normalized TRAIN slices only; dropout disabled",
+  "frozen_test": "not used for fitting, transforms or selection",
+  "reproduction_limit": "Public CPU reference adaptation is not the original sealed GPU campaign runner"
+}

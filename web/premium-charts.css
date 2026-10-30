@@ -1,0 +1,27 @@
+/* Scientific plots retain exact coordinates; optical zoom never changes the domain. */
+.scientific-chart{position:relative;min-width:0;overflow:visible!important;margin-top:20px;background:transparent!important;border:0!important}
+.chart-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 8px 12px;border-bottom:1px solid #b8e3ea1a}
+.chart-series{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px;color:#b9ced6;font-size:12px;line-height:1.5}
+.chart-series span{display:inline-flex;gap:8px;align-items:center}.chart-series i{width:18px;height:2px;background:var(--series-color);display:inline-block;flex:none}
+.chart-toolbar .chart-zoom{font-size:11px;white-space:nowrap;min-height:32px;padding:6px 11px;border:1px solid #b8e3ea30;border-radius:5px;background:transparent;color:#d4e6ec}
+.chart-toolbar .chart-zoom:hover,.chart-toolbar .chart-zoom[aria-pressed=true]{border-color:#43d4c3;color:#43d4c3;background:#43d4c30a}
+.chart-viewport{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#407386 transparent;max-width:100%;border-radius:5px}
+.scientific-chart .chart-viewport svg{width:100%;height:auto;display:block;overflow:visible;min-width:0;max-width:none;background:radial-gradient(ellipse at 55% 60%,#16415120,transparent 70%)}
+.scientific-chart.chart-zoomed .chart-viewport svg{min-width:960px}
+.scientific-chart svg text{fill:#a9c2ce;font-size:12px;font-family:inherit;font-variant-numeric:tabular-nums}.scientific-chart svg .axis-title{font-size:12px;fill:#d4e4eb}
+.chart-grid{stroke:#b0d9e812;stroke-width:1;fill:none}.chart-axis{stroke:#8bb9ca45;stroke-width:1;fill:none}.chart-reference{stroke:#9bb9c077;stroke-width:1.2;stroke-dasharray:5 7}
+.chart-line{stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}.chart-point{cursor:crosshair;stroke:#09212a;stroke-width:1.5;transition:stroke-width 140ms,filter 140ms;outline:none}
+.chart-point:hover,.chart-point:focus,.chart-point.is-selected{stroke:#efffff;stroke-width:2;filter:drop-shadow(0 0 4px #9be9e66b)}
+.chart-crosshair{stroke:#b3d9dc65;stroke-width:1;stroke-dasharray:3 5;pointer-events:none;fill:none}.chart-halo{stroke:#d5fff8;stroke-width:1;opacity:0;pointer-events:none}
+.chart-floating-tip{position:absolute;z-index:3;pointer-events:none;box-sizing:border-box;max-width:min(280px,90%);padding:10px 13px;color:#ecf6f8;background:#102b39f5;border:1px solid #76b3bd70;border-radius:7px;box-shadow:0 8px 28px #0005;font-size:12px;line-height:1.5;backdrop-filter:blur(12px)}
+.chart-floating-tip[hidden]{display:none!important}
+.scientific-chart .chart-tip{min-height:48px;height:auto!important;line-height:1.65;font-size:12px;color:#b0c9d3;padding:12px 9px;border-top:1px solid #b8e3ea1a;background:transparent}
+.chart-viewport:focus-visible,.chart-zoom:focus-visible{outline:2px solid #43d4c3;outline-offset:3px}
+#confusion>div{transition:background 180ms,border-color 180ms}#confusion b{font-variant-numeric:tabular-nums}
+@media(max-width:600px){.chart-toolbar{align-items:flex-start;padding-left:0;padding-right:0;gap:8px}.chart-series{font-size:10px;gap:6px 10px}.chart-series i{width:12px}.scientific-chart .chart-viewport svg{min-width:470px}.scientific-chart .chart-tip{font-size:11px}.chart-toolbar .chart-zoom{font-size:10px;padding:5px 8px}.scientific-chart{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.chart-point,#confusion>div{transition:none}}
+.animations-paused .chart-point,.animations-paused #confusion>div{transition:none}
+/* Contain intrinsic SVG sizing inside grid tracks; mobile begins with all observations visible. */
+#evaluation article:has(.scientific-chart){min-width:0}
+@media(max-width:600px){.scientific-chart .chart-viewport svg{min-width:0}.scientific-chart.chart-zoomed .chart-viewport svg{min-width:680px}.scientific-chart svg text,.scientific-chart svg .axis-title{font-size:16px}}
+.scientific-chart .chart-viewport svg{max-height:470px}.scientific-chart.chart-zoomed .chart-viewport svg{max-height:none}

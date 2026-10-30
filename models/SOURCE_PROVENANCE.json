@@ -1,0 +1,52 @@
+{
+  "description": "Adapted code provenance only; original source tree is not a runtime dependency. No model weights or fitted transforms included.",
+  "sources": [
+    {
+      "original_relative_path": "artifacts/curve_search_20261029/prepared/source_snapshot/src/breastdcedl/university/search_models.py",
+      "sha256": "c7bba311720283c1a42e79e052f410e4f8eaaa230c51b8ec74f5be19e846ba4e"
+    },
+    {
+      "original_relative_path": "artifacts/curve_search_20261029/prepared/source_snapshot/src/breastdcedl/models/cnn.py",
+      "sha256": "ae087fff8e4ae1aeb78d08c730e42f24cafb83133f57bae11da495ca3211d39c"
+    },
+    {
+      "original_relative_path": "scripts/bn_recalibration_utils_20261028.py",
+      "sha256": "bf1c16a098b4ff44ca08c1555a14ceb82b472a79def55b8e6d662df80b37899c"
+    },
+    {
+      "original_relative_path": "src/breastdcedl/data/preprocessing.py",
+      "sha256": "09cdc2235a0af3d9adc16ffbdffa1540d4e2f974d0635fa2b1fdd51ca3307b35"
+    },
+    {
+      "original_relative_path": "src/breastdcedl/university/data.py",
+      "sha256": "69b6ab45ca43deea8521cb834bf2979f0cd2f5e0c6736170bc6c6e6f30904cf0"
+    },
+    {
+      "original_relative_path": "src/breastdcedl/multimodal.py",
+      "sha256": "fecd2de1646bc69d1f01416ec44b957dfaa3d479b8f6a1d526ac2b34568c8656"
+    },
+    {
+      "original_relative_path": "scripts/multimodal_study_20261029.py",
+      "sha256": "dc847d9fe456df80374816b3f665cb7b7aee66e2775611d6a9c1740b7f1e84d9"
+    },
+    {
+      "original_relative_path": "artifacts/clinical_oof_reproducible_20261030/predictor.py",
+      "sha256": "bc143fc1ba0eba058ccc2ddc19f212af969ed30e3614ed12ce96b7d098e63f6d"
+    }
+  ],
+  "architecture_comparison": {
+    "seed": 42,
+    "parameter_count": 24713,
+    "state_key_order_equal": true,
+    "initial_untrained_state_equal": true,
+    "torch_used_for_comparison": "2.5.1",
+    "comparison_does_not_use_trained_weights": true
+  },
+  "public_runtime_torch": "2.10.0",
+  "portability_adaptations": [
+    "Curated compact branch, preserved backbone state keys",
+    "Relative/user-supplied data paths",
+    "Non-pickle JSON/NPZ checkpoint I/O",
+    "CPU-reference training entrypoint; not the sealed historical runner"
+  ]
+}
