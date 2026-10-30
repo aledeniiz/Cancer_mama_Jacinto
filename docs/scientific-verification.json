@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "manifest": {
+    "status": "passed",
+    "files_checked": 38,
+    "sha256": "28052f5f3eaf37c1678cd11fbb4067ebe459cf33e3b7956eaa1087d62694426e"
+  },
+  "coverage": {
+    "status": "passed",
+    "public_patients": 1273,
+    "public_triplets": 12703,
+    "development": 1097,
+    "eligible_oof": 1092,
+    "historical_test": 176,
+    "oof_order_matches": true,
+    "each_oof_patient_once": true,
+    "oof_fold_counts": [
+      217,
+      219,
+      220,
+      219,
+      217
+    ],
+    "public_source_membership": true,
+    "private_teacher_validation_included": false
+  },
+  "stored_score_metrics": {
+    "oof_protocol": "Five patient-disjoint OOF folds, 1092 eligible development patients",
+    "oof": {
+      "image": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.5197346132128741,
+          "bce": 0.6296610001611703,
+          "average_precision": 0.32631477104737183,
+          "brier": 0.21389582288113218
+        },
+        "difference_from_original": {
+          "auc": 0.0,
+          "bce": 0.0
+        },
+        "score_dtype": "float64",
+        "replay": "original patient-score metric recomputation"
+      },
+      "tabular": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.6450048398806163,
+          "bce": 0.5775619139274957,
+          "average_precision": 0.4024169897303811,
+          "brier": 0.19609294555433898
+        },
+        "difference_from_original": {
+          "auc": 0.0,
+          "bce": 0.0
+        },
+        "score_dtype": "float64",
+        "replay": "original patient-score metric recomputation"
+      },
+      "fusion": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.6325522303783173,
+          "bce": 0.5933950850433897,
+          "average_precision": 0.40484922268085943,
+          "brier": 0.20074620842933655
+        },
+        "difference_from_original": {
+          "auc": 0.0,
+          "bce": 0.0
+        },
+        "score_dtype": "float32",
+        "replay": "original patient-score metric recomputation"
+      },
+      "linear_fusion": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.6354722916834719,
+          "bce": 0.5941802640094548,
+          "average_precision": 0.41214646688069345,
+          "brier": 0.20091641705050228
+        },
+        "difference_from_original": {
+          "auc": 0.0,
+          "bce": 0.0
+        },
+        "score_dtype": "float64",
+        "replay": "original patient-score metric recomputation"
+      }
+    },
+    "historical_cnn_ema_test": {
+      "metrics": {
+        "n": 176,
+        "auc": 0.5523853351741065,
+        "bce": 0.6176158443809591,
+        "average_precision": 0.3283521511036569,
+        "brier": 0.21285436329868837
+      },
+      "difference_from_original": {
+        "auc": 0.0,
+        "bce": 0.0
+      },
+      "replay": "original 176-patient score metric recomputation; MRI encoder not rerun",
+      "protocol_separate_from_oof": true,
+      "test_previously_used_with_other_model": true
+    },
+    "final_multimodal_checkpoint_has_independent_validation": false
+  },
+  "model_replay": {
+    "status": "passed",
+    "model_manifest": {
+      "status": "passed",
+      "files_checked": 38,
+      "sha256": "f688eec5421e0199057d92431d7f6d113462b11302a5410cdcff6456fa8eee1d"
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "n": 217,
+        "cnn_embedding_checkpoint_match": true,
+        "clinical_max_probability_error": 1.1102230246251565e-16,
+        "cnn_classifier_max_probability_error": 5.960464483090178e-08,
+        "fusion_max_probability_error": 0.0
+      },
+      {
+        "fold": 1,
+        "n": 219,
+        "cnn_embedding_checkpoint_match": true,
+        "clinical_max_probability_error": 1.6653345369377348e-16,
+        "cnn_classifier_max_probability_error": 8.940696716308594e-08,
+        "fusion_max_probability_error": 0.0
+      },
+      {
+        "fold": 2,
+        "n": 220,
+        "cnn_embedding_checkpoint_match": true,
+        "clinical_max_probability_error": 1.6653345369377348e-16,
+        "cnn_classifier_max_probability_error": 5.960464483090178e-08,
+        "fusion_max_probability_error": 0.0
+      },
+      {
+        "fold": 3,
+        "n": 219,
+        "cnn_embedding_checkpoint_match": true,
+        "clinical_max_probability_error": 1.6653345369377348e-16,
+        "cnn_classifier_max_probability_error": 5.960464483090178e-08,
+        "fusion_max_probability_error": 0.0
+      },
+      {
+        "fold": 4,
+        "n": 217,
+        "cnn_embedding_checkpoint_match": true,
+        "clinical_max_probability_error": 2.220446049250313e-16,
+        "cnn_classifier_max_probability_error": 8.940696721859709e-08,
+        "fusion_max_probability_error": 0.0
+      }
+    ],
+    "oof_model_replay": {
+      "image": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.5197346132128741,
+          "bce": 0.6296609996953556,
+          "average_precision": 0.32631477104737183,
+          "brier": 0.21389582284816297
+        },
+        "max_probability_error": 8.940696721859709e-08,
+        "probability_tolerance": 1e-06,
+        "metric_difference": {
+          "auc": 0.0,
+          "bce": -4.658147201297425e-10
+        }
+      },
+      "tabular": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.6450048398806163,
+          "bce": 0.5775619139274957,
+          "average_precision": 0.4024169897303811,
+          "brier": 0.19609294555433898
+        },
+        "max_probability_error": 2.220446049250313e-16,
+        "probability_tolerance": 1e-14,
+        "metric_difference": {
+          "auc": 0.0,
+          "bce": 0.0
+        }
+      },
+      "fusion": {
+        "metrics": {
+          "n": 1092,
+          "auc": 0.6325522303783173,
+          "bce": 0.5933950850433897,
+          "average_precision": 0.40484922268085943,
+          "brier": 0.20074620842933655
+        },
+        "max_probability_error": 0.0,
+        "probability_tolerance": 1e-06,
+        "metric_difference": {
+          "auc": 0.0,
+          "bce": 0.0
+        }
+      }
+    },
+    "cnn_ema_development_classifier_max_probability_error": 8.940696716308594e-08,
+    "MRI_encoder_recomputed": false,
+    "linear_fusion": "Only stored-score metrics replayed: original fitted weights were not persisted; no substitute was trained.",
+    "final_multimodal_head": "Present; EMA lineage checked; no independent performance assigned."
+  },
+  "training_executed": false,
+  "MRI_images_required": false,
+  "scope": "Scientific score/embedding/head replay, not MRI image-encoder reproduction or new independent validation"
+}

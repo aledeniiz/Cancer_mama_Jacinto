@@ -1,5 +1,5 @@
 {
-  "description": "Adapted code provenance only; original source tree is not a runtime dependency. No model weights or fitted transforms included.",
+  "description": "Adapted code provenance; original tree is not a runtime dependency. Preserved trained artifacts have separate provenance in models/trained/.",
   "sources": [
     {
       "original_relative_path": "artifacts/curve_search_20261029/prepared/source_snapshot/src/breastdcedl/university/search_models.py",

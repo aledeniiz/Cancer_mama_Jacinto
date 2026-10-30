@@ -12,7 +12,7 @@ from .models import CompactPatientCNN
 def load_checkpoint(path):
     path=Path(path)
     if not path.exists():
-        raise FileNotFoundError("Checkpoint unavailable. This public repository distributes no trained weights; supply an authorized local checkpoint.")
+        raise FileNotFoundError("Checkpoint unavailable. Select an existing bundle from models/trained or supply an authorized local checkpoint.")
     if not path.is_dir():
         raise ValueError("Public loaders accept a JSON/NPZ bundle directory only; pickle-based .pt/.pth files require trusted private conversion outside this public loader.")
     try:

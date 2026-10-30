@@ -86,5 +86,8 @@
   "calibration_bins_copied": 0,
   "score_thresholds_in_roc_copied": 0,
   "public_inference_available": false,
-  "procedural_graphics": "Original educational canvases retained; these are explicitly synthetic, not patient images or model activations."
+  "procedural_graphics": "Original educational canvases retained; these are explicitly synthetic, not patient images or model activations.",
+  "scope": "This provenance file describes the static browser bundle only. Repository model/evaluation artifacts are distributed separately in models/trained and evaluation.",
+  "repository_model_and_evaluation_artifacts": "Distributed separately; not embedded or loaded by the browser.",
+  "mri_images_distributed": false
 }

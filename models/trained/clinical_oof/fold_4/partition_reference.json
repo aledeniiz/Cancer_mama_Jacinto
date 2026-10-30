@@ -1,0 +1,9 @@
+{
+  "fold": 4,
+  "source_partition_sha256": "4a5d4e0d744bea3e1530acaa29983d806fa26b45545f6ef33cb88b83f8ef4860",
+  "historical_partition_sha256": "4a5d4e0d744bea3e1530acaa29983d806fa26b45545f6ef33cb88b83f8ef4860",
+  "training_n": 875,
+  "validation_n": 217,
+  "patient_identifiers_not_in_model_bundle": true,
+  "note": "Five eligible clinical evaluators; neither a global final estimator nor an average of folds."
+}

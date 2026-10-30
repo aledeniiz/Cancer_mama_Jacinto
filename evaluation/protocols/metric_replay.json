@@ -1,0 +1,20 @@
+{
+  "original_score_dtypes": {
+    "image": "float64",
+    "tabular": "float64",
+    "fusion": "float32",
+    "linear_fusion": "float64",
+    "historical_test": "float64"
+  },
+  "metric_functions": "Original sklearn roc_auc_score, log_loss(labels=[0,1]), average_precision_score, brier_score_loss",
+  "evidence": "source_snapshot/scripts/multimodal_study_20261029.py: fusion is net.sigmoid().numpy() float32; logistic predict_proba and extracted Python float scores are float64",
+  "csv_policy": "Parse original neural-fusion shortest-decimal CSV values back to float32 before metric calculation; do not change labels, scores or ranking",
+  "stored_metric_tolerance": 1e-14,
+  "clinical_probability_tolerance": 1e-14,
+  "neural_classifier_probability_tolerance": 1e-6,
+  "limitations": [
+    "No medical-image encoder replay without images",
+    "Linear-fusion estimator was not persisted; only its original score metrics are replayed",
+    "Final all-development multimodal head has no independently held-out performance assigned"
+  ]
+}

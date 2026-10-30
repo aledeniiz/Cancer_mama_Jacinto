@@ -22157,5 +22157,5 @@
     }
   },
   "ready": false,
-  "message": "Versión pública: pesos y datos clínicos privados no distribuidos. La inferencia y la carga de imágenes están desactivadas; se conservan los resultados agregados."
+  "message": "El repositorio incluye modelos, metadatos y predicciones para análisis local. Esta página estática muestra resultados agregados y no carga modelos ni acepta MRI; las imágenes MRI no se distribuyen."
 }

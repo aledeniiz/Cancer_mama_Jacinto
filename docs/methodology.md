@@ -62,8 +62,9 @@ algebraically, without fitting, in the private preservation phase. Five fresh
 processes reproduced 1,092 ordered OOF predictions with maximum absolute error
 2.220446049250313e-16, unchanged AUC 0.6450048398806163 and BCE
 0.5775619139274957. That private check was repeated after a complete local restore.
-Those parameters, records and partition identifiers are **not distributed here**.
-The public loader implementation accepts a separately authorized local artifact.
+Those recovered parameters are now distributed in `models/trained/`; reviewed
+public-case inputs, predictions and partition identifiers are in `evaluation/`.
+The original missing serialization and algebraic recovery remain documented.
 
 No clinical-only global model trained on all 1,092 patients was created by the
 original study; no replacement is fabricated. Averages of fold predictors define

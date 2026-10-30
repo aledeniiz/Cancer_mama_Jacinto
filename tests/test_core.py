@@ -129,7 +129,7 @@ def test_evaluate_cli_rejects_wrong_fold_before_reading_images(tmp_path):
 
 
 def test_restricted_checkpoint_and_missing_weight_failure(tmp_path):
-    with pytest.raises(FileNotFoundError,match='no trained weights'):load_cnn(tmp_path/'missing.pt')
+    with pytest.raises(FileNotFoundError,match='Checkpoint unavailable'):load_cnn(tmp_path/'missing.pt')
     bad=tmp_path/'not-a-checkpoint.pt';bad.write_bytes(b'not pickle or tensors')
     with pytest.raises(ValueError,match='JSON/NPZ'):load_checkpoint(bad)
     model=CompactPatientCNN();path=tmp_path/'synthetic-unit-state'

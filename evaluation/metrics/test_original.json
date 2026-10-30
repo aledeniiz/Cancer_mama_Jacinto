@@ -1,0 +1,26 @@
+{
+  "n_patients": 176,
+  "n_slices": 1758,
+  "positives": 53,
+  "auc": 0.5523853351741065,
+  "auc_ci95_stratified_patient_bootstrap": [
+    0.4628010431047707,
+    0.6393733701487958
+  ],
+  "bce": 0.6176158443809591,
+  "average_precision": 0.3283521511036569,
+  "brier": 0.21285436329868837,
+  "train_prior": 0.2938496583143508,
+  "train_prior_test_bce": 0.6119514015915962,
+  "threshold": 0.5,
+  "tn": 123,
+  "fp": 0,
+  "fn": 53,
+  "tp": 0,
+  "sensitivity": 0.0,
+  "specificity": 1.0,
+  "patient_overlap": 0,
+  "checkpoint_unchanged": true,
+  "state_unchanged_during_inference": true,
+  "test_previously_used_with_other_model": true
+}

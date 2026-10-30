@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "note": "All model-release files except this self-manifest and final reload verification report, to avoid circular hashing.",
+  "files": [
+    {
+      "path": "clinical_oof/fold_0/model.json",
+      "size": 3321,
+      "sha256": "5cfdb8f3c44f1e44ce97bfa96923915e51cbac22de3e8753c36df7765a75780c"
+    },
+    {
+      "path": "clinical_oof/fold_0/partition_reference.json",
+      "size": 414,
+      "sha256": "b5c71547c53fd155d5a8164c281ef81233709eac0cef0ff9c50ae9eddcd45b20"
+    },
+    {
+      "path": "clinical_oof/fold_1/model.json",
+      "size": 3340,
+      "sha256": "f9097a4a6d29208a0d88f1ab9eb66fa1e36918b60c71f86f08e6d230ebbe5cc0"
+    },
+    {
+      "path": "clinical_oof/fold_1/partition_reference.json",
+      "size": 414,
+      "sha256": "7e6ccb8d8d031be3db8dba712744e41cc6f99a5123bf8dc7fe20c357d6eccbac"
+    },
+    {
+      "path": "clinical_oof/fold_2/model.json",
+      "size": 3334,
+      "sha256": "23e4eb330a2f2a42c66f8664df32ec1ba17652e12a93d19512393dc3ade7dd62"
+    },
+    {
+      "path": "clinical_oof/fold_2/partition_reference.json",
+      "size": 414,
+      "sha256": "38351d04750c1d7239b1597e9fa77f6e2e1e8c9e121db45e3b1200f653bd682f"
+    },
+    {
+      "path": "clinical_oof/fold_3/model.json",
+      "size": 3339,
+      "sha256": "637ff10ffa7c10919e9a03fc0a4c4390a3be1e927725fe3038c998ae87dd9eae"
+    },
+    {
+      "path": "clinical_oof/fold_3/partition_reference.json",
+      "size": 414,
+      "sha256": "f1b907ccc88d5586a871b5fdeea18c40870a260e91ed3264ffdbbc50727872de"
+    },
+    {
+      "path": "clinical_oof/fold_4/model.json",
+      "size": 3337,
+      "sha256": "fae07b73172b59743d7c541ecf54469009b46371a58376390f9bee98ea59d160"
+    },
+    {
+      "path": "clinical_oof/fold_4/partition_reference.json",
+      "size": 414,
+      "sha256": "8b69cb655b078fddf7510f2c62e8bb4770db0d339ac88a8ada6dfba4e8571e75"
+    },
+    {
+      "path": "cnn_ema/metadata.json",
+      "size": 1674,
+      "sha256": "ded1c6073ddeee0161088007f3ddf2127ad4044b4b7d1c655c0e45a3b5cb1a63"
+    },
+    {
+      "path": "cnn_ema/weights.npz",
+      "size": 99987,
+      "sha256": "b55fbaec6c36457aa471e7f7eb04aa2b824eb5a4d9c7c164531c3d4a92de0304"
+    },
+    {
+      "path": "cnn_oof/fold_0/metadata.json",
+      "size": 2099,
+      "sha256": "e68eefa1c9b0b8eb404fe99fce6d9dd784dd61827f057165fbc28ece6c0150a2"
+    },
+    {
+      "path": "cnn_oof/fold_0/weights.npz",
+      "size": 100038,
+      "sha256": "75eaebb553751812977ec41a0747a9dde1b45acda173cf60f0e4840645f73c1c"
+    },
+    {
+      "path": "cnn_oof/fold_1/metadata.json",
+      "size": 2100,
+      "sha256": "d6e875fc94365fafe2559426b7cb89c5d3b5b39478f27c436f51f1ba8a042578"
+    },
+    {
+      "path": "cnn_oof/fold_1/weights.npz",
+      "size": 100043,
+      "sha256": "e315e3e98d67c0bc41265b51c45bccacd52c7231ee8a83b2d5f55f64e792ce67"
+    },
+    {
+      "path": "cnn_oof/fold_2/metadata.json",
+      "size": 2101,
+      "sha256": "399efea2af7a3098e3da58deb456238ed953b66ec44f69f11081407be19dc53d"
+    },
+    {
+      "path": "cnn_oof/fold_2/weights.npz",
+      "size": 100042,
+      "sha256": "c6135e92f45454fbb3ee683e0cde14019a6709c9c4d84f7fb6cea288225b5f74"
+    },
+    {
+      "path": "cnn_oof/fold_3/metadata.json",
+      "size": 2102,
+      "sha256": "633ae7cf3bccb64561d60db48124cea25cbf094492b81775e1c9ec8333817fc5"
+    },
+    {
+      "path": "cnn_oof/fold_3/weights.npz",
+      "size": 100010,
+      "sha256": "37a72091517b6b37912cf6f311fc2f51c46378347a0b67bebb63f7c456a276ea"
+    },
+    {
+      "path": "cnn_oof/fold_4/metadata.json",
+      "size": 2101,
+      "sha256": "d0f87d75f75ad121489cc3de8d45ad017660dd1cdd5c688d36f2aeba2408e383"
+    },
+    {
+      "path": "cnn_oof/fold_4/weights.npz",
+      "size": 100043,
+      "sha256": "c8dbc42b87a9869292039b31d880e560d48ac1d9e17524d8aabdb243fa34d01f"
+    },
+    {
+      "path": "fusion_oof/fold_0/metadata.json",
+      "size": 4315,
+      "sha256": "d036a2c756c1bff5bad0b254a045447f223097ef13787b16dc2b9c38c9b6506a"
+    },
+    {
+      "path": "fusion_oof/fold_0/weights.npz",
+      "size": 6013,
+      "sha256": "a2ca01d693279ce8f243330ede301ac5d38fc3be59e5121583d9228f50854007"
+    },
+    {
+      "path": "fusion_oof/fold_1/metadata.json",
+      "size": 4306,
+      "sha256": "bb41d46d0767e566982c18bb431339258b4ca43b5a27af2ad18e672d45ab93e4"
+    },
+    {
+      "path": "fusion_oof/fold_1/weights.npz",
+      "size": 6004,
+      "sha256": "1672d906d15aed46557b745536556ce71fd99e0aaa5acb4b3f54c6109134f217"
+    },
+    {
+      "path": "fusion_oof/fold_2/metadata.json",
+      "size": 4324,
+      "sha256": "427001d1e976d9e6ef6b5f0a19d0b1f23e16a941342267a5120da0ceac4679e5"
+    },
+    {
+      "path": "fusion_oof/fold_2/weights.npz",
+      "size": 5999,
+      "sha256": "2e606e2829d85003117746ff12df2f64bb2ac27759b61710ded9bf90337bdcd7"
+    },
+    {
+      "path": "fusion_oof/fold_3/metadata.json",
+      "size": 4316,
+      "sha256": "25090695722494d4219136419cc09b345f265e45c31ef108e8b6802831124d31"
+    },
+    {
+      "path": "fusion_oof/fold_3/weights.npz",
+      "size": 6005,
+      "sha256": "14dcb833f276624801ae3a7eda2d1c9f1a320341b3a612cd82336ed26f5650a2"
+    },
+    {
+      "path": "fusion_oof/fold_4/metadata.json",
+      "size": 4322,
+      "sha256": "d1055b499c026d385e3934740e872b815233d2702cd023371755d6b53b2fc8e6"
+    },
+    {
+      "path": "fusion_oof/fold_4/weights.npz",
+      "size": 5994,
+      "sha256": "a9ef72cc758ec35bddb3c5fd70b1d93dd118f17df2db24b962ea42bddc44f878"
+    },
+    {
+      "path": "multimodal_final/metadata.json",
+      "size": 4369,
+      "sha256": "c162e638283f8e9cc6dc9c3856dcfd8251c90e109f7808e0f23d30eaee0692ab"
+    },
+    {
+      "path": "multimodal_final/weights.npz",
+      "size": 6004,
+      "sha256": "43672d19ce6cb2df1612e638ad8cfa6cff877d9937ed916df4001d872bfaa586"
+    },
+    {
+      "path": "README.md",
+      "size": 5939,
+      "sha256": "c2bf19202c15c4dd52eebc387cd22c5e0b1f548d445197e5ac9a36a2e5ff7558"
+    },
+    {
+      "path": "registry.json",
+      "size": 10146,
+      "sha256": "6ab7d4ca6128a7bd3f6689077dc3e9bab96914bce89338da64e5b9eaf48d2687"
+    },
+    {
+      "path": "tensor_verification.json",
+      "size": 3682,
+      "sha256": "b545e2f5c1f7749431d5716b991ed248d67f6b1e930b721aadccefba67f329f5"
+    },
+    {
+      "path": "verify_reload.py",
+      "size": 4881,
+      "sha256": "481cdd65ef24c50eca7e07538ca823bec7acb446bea944ddfd039ed224f8bfc2"
+    }
+  ]
+}

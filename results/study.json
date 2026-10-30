@@ -23024,7 +23024,7 @@
     "Five unknown historical outcomes were excluded from clinical/fusion OOF, but historical fold CNN fitting included those five noisy labels.",
     "Bootstrap intervals are conditional on selected models and do not include model selection or retraining variability.",
     "The historical TEST was previously used with other models and is not a fresh independent test.",
-    "All weights, individual records/predictions, patient images and institutional presentation assets are withheld from this public package.",
+    "Preserved model parameters and reviewed public-case references are supplied separately in models/trained and evaluation; MRI images are not included. The academic presentation is provided separately with its branding rights retained.",
     "Research and educational use only. No demonstrated clinical utility or clinical authorization."
   ],
   "distribution": {

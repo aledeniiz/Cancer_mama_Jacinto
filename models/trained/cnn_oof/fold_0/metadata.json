@@ -1,0 +1,73 @@
+{
+  "normalization": {
+    "means": [
+      0.1274906258321561,
+      0.19535360273396854,
+      0.20568941499411666
+    ],
+    "std": [
+      0.15879352763029592,
+      0.24769745086692002,
+      0.2555287283357851
+    ],
+    "representation": "original"
+  },
+  "config": {
+    "architecture": "prospective_patient",
+    "pooling": "mean_embeddings",
+    "supervision": "patient",
+    "representation": "original",
+    "augmentation": "moderate",
+    "gain": false,
+    "clinical_features": [],
+    "loss": "bce",
+    "search_variant": "compact",
+    "scheduler_kind": "cosine",
+    "dropout": 0.3,
+    "seed": 42,
+    "fold": 0,
+    "max_epochs": 15,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "patient_batch_size": 8,
+    "slice_batch_size": 32,
+    "train_slices_per_patient": 10,
+    "gradient_accumulation_steps": 1,
+    "gradient_clip_norm": 1.0,
+    "num_workers": 0,
+    "amp": false,
+    "chunk_size": 16,
+    "max_train_batches": null,
+    "scheduler": true,
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 2,
+    "min_lr": 3e-05,
+    "early_stopping": false,
+    "early_patience": 5,
+    "min_delta": 0.003,
+    "min_epochs": 15,
+    "memorization": false,
+    "max_optimizer_steps": null
+  },
+  "epoch": 2,
+  "artifact_scope": "historical_outer_fold_cnn_ordinary_not_global_ema",
+  "source_checkpoint_sha256": "fe9feac351772cef38e98bdffa59bf263d55092e07cb0696044f98c5c2ae0e26",
+  "original_environment": {
+    "torch": "2.5.1+cu121",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.8.0",
+    "Pillow": "12.3.0",
+    "matplotlib": "3.10.6"
+  },
+  "fold": 0,
+  "source_partition": {
+    "fold": 0,
+    "sha256": "dfe42917427665a5ea752e874ea090bc2fc6618db407118c8c7bdf4f0c0ea19d",
+    "relative_source": "artifacts/compacta_cv15_20261028/prepared/fold_0/partition.csv",
+    "training_role": "refit",
+    "outer_role": "outer",
+    "note": "Original historical partition provenance; not fabricated current-format partition_lineage."
+  },
+  "format": "breastdce-json-npz-v1"
+}

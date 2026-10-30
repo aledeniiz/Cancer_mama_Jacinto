@@ -28,6 +28,11 @@ patients*. Scientific Data **13**, 264 (2026).
 The prepared experimental subset contains 1,273 patients; this is not the complete
 source dataset. Dataset access is governed separately by the
 [version-specific Zenodo record](https://zenodo.org/records/18114231) and source
-cohort terms. Patient records, weights, institutional presentation assets and
-publisher figures are not redistributed. No endorsement by UAX, dataset authors,
+cohort terms. Reviewed public-case metadata, predictions, embeddings and preserved model
+parameters are included under the separate research/noncommercial conditions
+described in docs/redistribution.md. MRI images, private teacher validation,
+standalone institutional templates/logos and publisher figures are not redistributed.
+The student's final academic presentation is included with institutional branding
+preserved; third-party marks/assets are not relicensed by the code LICENSE.
+No endorsement by UAX, dataset authors,
 source cohorts or clinical institutions is implied.

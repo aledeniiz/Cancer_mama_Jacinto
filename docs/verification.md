@@ -1,100 +1,74 @@
-# Verification of the public edition
+# Verificación de la entrega científica
 
-Verification date: 30 October 2026. No new training, hyperparameter optimization
-or scientific experiment was executed. Tests use artificial software fixtures;
-they do not reproduce the private clinical results.
+Fecha: 30 de octubre de 2026. Sin entrenamientos, optimización ni cambios de
+arquitectura o resultados originales. Se comprobó en Python 3.11 y PyTorch
+2.10.0 CPU; las versiones están en [tested-environment.json](tested-environment.json).
 
-## Fresh installation and portability
+## Comprobaciones realizadas
 
-A new Python 3.11 environment was created outside the release directory. CPU
-PyTorch 2.10.0 and `.[test,plots]` were installed from package registries. The
-runtime versions are in [tested-environment.json](tested-environment.json).
-The source project, its virtual environment and its checkpoints were not used
-as dependencies of the new installation.
+- **25 tests superados**, incluidos los controles originales, el artefacto
+  estático de Pages, integridad de la lista permitida y reproducción científica.
+- **17 modelos recargados en 17 procesos independientes**; sus parámetros conservan
+  192 tensores exactamente iguales a los originales. Los cinco clínicos preservan
+  coeficientes, interceptos recuperados y transformadores. Véanse el
+  [registro](../models/trained/registry.json) y la
+  [recarga](../models/trained/reload_verification.json).
+- Metadatos del caso público comparados byte a byte con su descarga: 1.273 pacientes
+  y 12.703 tripletes; etiquetas, edad y HR coincidentes. La validación privada del
+  profesor no está incluida. La licencia y atribución están en `evaluation/`.
+- Cobertura y orden original de 1.092 predicciones OOF, cinco folds por paciente,
+  particiones de desarrollo/TEST y 176 predicciones del TEST histórico comprobados.
+- ROC-AUC y BCE originales recalculados desde los scores guardados. Se respeta
+  el tipo original float32 de la fusión al reconstruir la aritmética de sus métricas;
+  convertir indiscriminadamente todo a float64 cambia los últimos decimales de BCE.
+- Predicciones de clínica, clasificador CNN y fusión neuronal recalculadas desde
+  sus parámetros y los embeddings originales. Error máximo de probabilidad:
+  clínica **2.2204460492503131e-16**, CNN por fold **8.9406967218597089e-08**, fusión **0**.
+  La fusión se compara tras restaurar el float32 original: las probabilidades
+  coinciden exactamente; los decimales de serialización del CSV no son float64 originales.
+  Las tolerancias y diferencias de métricas se informan explícitamente en la salida.
+- 19 archivos críticos del proyecto original comparados con sus hashes previos:
+  todos intactos. No se alteraron originales ni respaldos.
 
-**16 tests passed** in the new environment. A second copy of the public checkout
-was placed in a separate directory: **all 16 tests passed there**, and its web
-builder check passed. Imports in that test select the relocated source directory.
-No original workstation path is required. The safe checkpoint loader rejects
-pickle files, malformed array headers and unexpected tensor shapes/types.
+## Alcance real
 
-The suite includes wrong-fold/metadata-lineage rejection, phase-file ownership,
-training-only transforms, architecture and aggregation, missing local resources,
-invalid labels/empty fusion inputs, and the local server path allow-list. Invalid
-training requests are rejected before fitting; no training loop was run.
+La comprobación del encoder desde píxeles necesita las MRI, que se descargan por
+separado. El replay de embeddings no sustituye esa prueba ni una validación externa.
+Las pruebas artificiales de recarga verifican software, no rendimiento científico.
+No se repite el entrenamiento histórico GPU ni se promete equivalencia bit a bit.
 
-Ten script `--help` contracts were exercised successfully, including preparation,
-training, evaluation, CNN/clinical/fusion inference, EMA and the server. Figures
-were rendered from the public aggregate JSON. These operations are software and
-export checks, not an independent validation of the trained models.
+Los cinco clínicos son modelos OOF: no existe un clínico global final guardado.
+La fusión lineal no guardó su estimador; se preservan sus predicciones y métricas,
+sin fabricar un sustituto. La cabeza multimodal final no tiene una evaluación
+independiente. No se mezcla su resultado con la CNN EMA del TEST histórico.
 
-## Faithful web export
+## Web, entrega y revisión
 
-The finished platform's Spanish design, chapters, procedural graphics and
-multimodal section are preserved. Browser inspection covered the normal viewport
-and a 390-pixel mobile viewport. No JavaScript errors were reported during those
-checks. All **six image-upload controls** were verified disabled in the public
-copy. Patient records, learned normalizers, calibration bins and score thresholds
-are withheld; no inference API is called and no prediction fallback is invented.
+Se conserva el diseño de la plataforma y la selección visible de tres modelos
+multimodales. El navegador verificó los avisos nuevos, seis cargas desactivadas
+y ausencia de errores de consola durante esa comprobación. El generador comprueba
+que el HTML coincide con sus fuentes. Pages sigue sin ejecutar inferencia Python.
+La presentación final conserva sus cinco diapositivas y sus archivos originales.
 
-`python web/build_public.py --check` verifies the generated page against its own
-sanitized source files. The same check passed after relocation. See
-[PUBLIC_EXPORT.md](../web/PUBLIC_EXPORT.md) for exactly which interactions remain
-available and which depend on private resources.
+El escáner sigue revisando todos los archivos, incluso ignorados, excepto el
+almacenamiento interno de Git. Los formatos de datos/modelos y sus identificadores
+solo se permiten en rutas científicas revisadas con hash y tamaño exactos. Un
+archivo añadido o cambiado fuera de esa lista queda bloqueado. Las comprobaciones
+de credenciales y rutas de máquina siguen aplicándose. El escaneo es evidencia
+limitada, no una prueba universal de ausencia de secretos.
 
-The local server returned 200 for the public web and aggregate JSON resources,
-and 404 for private/dotfile probe paths. Its tests also exercise nested private
-README/LICENSE denial; a 404 for an absent file alone is not a security proof.
-No server was deployed publicly and the original private platform was untouched.
-
-## Privacy and file review
-
-Every release file is inspected, regardless of Git ignore status. The local
-scanner checks known credential patterns, filesystem paths, unexpected binaries,
-large files, forbidden data/model/cache formats, embedded binary images and
-exact duplicate files. Matched values are not printed. A separate private scan
-compared release text against all **1,273 known patient identifiers** and found
-no matches; the identifier list and private scan inputs are not distributed.
-
-The sanitized presentation payload has zero patient rows, no learned normalizer
-values and no calibration bins. Aggregate ROC/PR coordinates contain no score
-thresholds. No real weights, clinical coefficients, fitted statistics, individual
-OOF/TEST rows, institutional deck, source medical image, credential or private
-local experiment history is included in the reviewed release tree. Existing
-public commits are preserved; old records were not purged from that history.
-Artificial test constants are not learned parameters.
-
-These are bounded checks, not a proof against every possible secret or privacy
-attack. Rights review and future additions still require human review. The code
-license is preserved; dataset terms and excluded-resource decisions are documented
-in [redistribution.md](redistribution.md) and [NOTICE.md](../NOTICE.md).
-
-## Repeatable release checks
+## Repetir
 
 ```sh
-python -B -m pytest -q
-python -B web/build_public.py --check
+python -B scripts/reproduce_results.py
+python -B models/trained/verify_reload.py
+python -B -m pytest -q -p no:cacheprovider
 python -B scripts/audit_release.py
-python -B scripts/render_results.py
+python -B web/build_public.py --check
 ```
 
-To create a **new**, nonexisting release manifest after inspecting every file:
-
-```sh
-python -B scripts/audit_release.py --write-manifest docs/release_manifest.json
-```
-
-The manifest lists repository-relative paths, byte sizes and SHA-256 values.
-It excludes its own file to avoid self-reference. Regenerate it under a new name
-after later changes, and review the complete directory before any commit.
-
-## Publication state
-
-The initial preparation completed without publishing, initializing Git or copying
-private Git history into the clean directory. Subsequent publication targets the
-existing repository and preserves its existing history; current hosting setup
-is described in [deployment.md](deployment.md). Trained weights and UAX redistribution
-are not cleared and those resources remain excluded. Full private experiment
-reproduction requires legitimately obtained data, exact private artifacts and
-protocol lineage. The public checkout alone cannot reproduce that evidence.
-
+Los manifests científicos y de modelos se validan antes del replay. La lista
+`scientific_artifact_allowlist.json` delimita los artefactos aprobados y
+`release_manifest.json` recoge los archivos entregados, excluyéndose a sí mismo.
+Cambiar esa lista exige revisar la procedencia, licencia y hashes; no basta con
+desactivar el escáner. El diagnóstico vacío local ignorado no forma parte de la entrega.

@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "cnn_ema",
+      "kind": "cnn",
+      "scope": "historical_ema_epoch15",
+      "fold": null,
+      "source": "artifacts/curve_search_20261029/prepared/weight_ema08/epoch_015.pt",
+      "source_sha256": "d9fcf647298a88b3106eb5861a866dbab937f22d191d5e5e3804e97fe23677d5",
+      "tensor_fingerprint": "149d5b65a4cf3fdab6b5bb972f8642fbea781d5b8fce7396063da18f86402014",
+      "tensor_count": 26,
+      "trainable_parameters": 24713,
+      "normalization_exact": true
+    },
+    {
+      "id": "cnn_oof/fold_0",
+      "kind": "cnn",
+      "scope": "historical_outer_fold_cnn_ordinary_not_global_ema",
+      "fold": 0,
+      "source": "artifacts/compacta_cv15_20261028/prepared/fold_0/refit/epoch_002.pt",
+      "source_sha256": "fe9feac351772cef38e98bdffa59bf263d55092e07cb0696044f98c5c2ae0e26",
+      "tensor_fingerprint": "67bfc68cf6ee905d6d8b75e716ab308920aaf6c235f013fff8e200f5eb70857b",
+      "tensor_count": 26,
+      "trainable_parameters": 24713,
+      "normalization_exact": true
+    },
+    {
+      "id": "cnn_oof/fold_1",
+      "kind": "cnn",
+      "scope": "historical_outer_fold_cnn_ordinary_not_global_ema",
+      "fold": 1,
+      "source": "artifacts/compacta_cv15_20261028/prepared/fold_1/refit/epoch_001.pt",
+      "source_sha256": "db5c69d400802a9d8895e9f9b70693c60687c28cea9e72f648f05695fb268ddf",
+      "tensor_fingerprint": "5991590ea877b999f52463e91ee642aa2a57a63c2f33a6e6705dba96cce0fc62",
+      "tensor_count": 26,
+      "trainable_parameters": 24713,
+      "normalization_exact": true
+    },
+    {
+      "id": "cnn_oof/fold_2",
+      "kind": "cnn",
+      "scope": "historical_outer_fold_cnn_ordinary_not_global_ema",
+      "fold": 2,
+      "source": "artifacts/compacta_cv15_20261028/prepared/fold_2/refit/epoch_004.pt",
+      "source_sha256": "bd650e63b614cdeccb2ec6d9bd5bb719b0589d039e38358d62df10f6d46ee220",
+      "tensor_fingerprint": "e14181adc4a630ce99a938fcded26ee8cb614e6560be0ba32e587de12d92790a",
+      "tensor_count": 26,
+      "trainable_parameters": 24713,
+      "normalization_exact": true
+    },
+    {
+      "id": "cnn_oof/fold_3",
+      "kind": "cnn",
+      "scope": "historical_outer_fold_cnn_ordinary_not_global_ema",
+      "fold": 3,
+      "source": "artifacts/compacta_cv15_20261028/prepared/fold_3/refit/epoch_014.pt",
+      "source_sha256": "c78a773ac202a4b75edbd6957f5e327e0a9e4955e9c4a722257175112543fa1b",
+      "tensor_fingerprint": "73b16852f8e416f68a4a4a958904775369199643c038bdaff821cd51c67a0d3b",
+      "tensor_count": 26,
+      "trainable_parameters": 24713,
+      "normalization_exact": true
+    },
+    {
+      "id": "cnn_oof/fold_4",
+      "kind": "cnn",
+      "scope": "historical_outer_fold_cnn_ordinary_not_global_ema",
+      "fold": 4,
+      "source": "artifacts/compacta_cv15_20261028/prepared/fold_4/refit/epoch_008.pt",
+      "source_sha256": "f62cf8850329e16ab644747c5a8d44930cc549c312f6b2645ae00886cff9685d",
+      "tensor_fingerprint": "7daa2739b606ce7833446115e23c5cd384958f065d354e32302fc367877e64fb",
+      "tensor_count": 26,
+      "trainable_parameters": 24713,
+      "normalization_exact": true
+    },
+    {
+      "id": "fusion_oof/fold_0",
+      "kind": "neural_head",
+      "scope": "outer_fold_neural_fusion_head",
+      "fold": 0,
+      "source": "artifacts/multimodal_20261029/head_fold_0.pt",
+      "source_sha256": "241e7de75b87f609800d5b02c1cd5a3d0e1b2f7212161b41e3a105f127e79726",
+      "image_checkpoint_sha256": "fe9feac351772cef38e98bdffa59bf263d55092e07cb0696044f98c5c2ae0e26",
+      "tensor_fingerprint": "dc05cc28615b161900f36ddaeb421212df63af03fde12b529f6bd4022efb8baa",
+      "tensor_count": 6,
+      "trainable_parameters": 1225
+    },
+    {
+      "id": "fusion_oof/fold_1",
+      "kind": "neural_head",
+      "scope": "outer_fold_neural_fusion_head",
+      "fold": 1,
+      "source": "artifacts/multimodal_20261029/head_fold_1.pt",
+      "source_sha256": "e8b2c7a3211b51f3c217b299069b489508c21532f32a48c6dba0584bc9f0a13b",
+      "image_checkpoint_sha256": "db5c69d400802a9d8895e9f9b70693c60687c28cea9e72f648f05695fb268ddf",
+      "tensor_fingerprint": "609a2c03e6a12809b034a0f7070ea2c9efa308f58944bab617e6013e3b9780b2",
+      "tensor_count": 6,
+      "trainable_parameters": 1225
+    },
+    {
+      "id": "fusion_oof/fold_2",
+      "kind": "neural_head",
+      "scope": "outer_fold_neural_fusion_head",
+      "fold": 2,
+      "source": "artifacts/multimodal_20261029/head_fold_2.pt",
+      "source_sha256": "86b0fcda372c72c1c62b466b8d6377f1a1f4aab7957f3cea6f0dd720839ff7f6",
+      "image_checkpoint_sha256": "bd650e63b614cdeccb2ec6d9bd5bb719b0589d039e38358d62df10f6d46ee220",
+      "tensor_fingerprint": "ea21e7c7fc2a55d04b371051be157c4d75d4cdacd4aa0e4166762ee318da543e",
+      "tensor_count": 6,
+      "trainable_parameters": 1225
+    },
+    {
+      "id": "fusion_oof/fold_3",
+      "kind": "neural_head",
+      "scope": "outer_fold_neural_fusion_head",
+      "fold": 3,
+      "source": "artifacts/multimodal_20261029/head_fold_3.pt",
+      "source_sha256": "77f1dbc22dba61dbc7e1a2945a9177a271adfb4619814294db6cd4998a205eb6",
+      "image_checkpoint_sha256": "c78a773ac202a4b75edbd6957f5e327e0a9e4955e9c4a722257175112543fa1b",
+      "tensor_fingerprint": "9c5a9a19501932591fb25cf0431e76b75eb81547649586065faded0822fbcec6",
+      "tensor_count": 6,
+      "trainable_parameters": 1225
+    },
+    {
+      "id": "fusion_oof/fold_4",
+      "kind": "neural_head",
+      "scope": "outer_fold_neural_fusion_head",
+      "fold": 4,
+      "source": "artifacts/multimodal_20261029/head_fold_4.pt",
+      "source_sha256": "b6b65ff7083f3ca6cc4159301ff9deda057e765fda580cb02f701893b7c6c3b5",
+      "image_checkpoint_sha256": "f62cf8850329e16ab644747c5a8d44930cc549c312f6b2645ae00886cff9685d",
+      "tensor_fingerprint": "c31166fd336de4a199ffc56ae092264ef75c0a55c9f5f2fbf806f7e86bba7cf6",
+      "tensor_count": 6,
+      "trainable_parameters": 1225
+    },
+    {
+      "id": "multimodal_final",
+      "kind": "neural_head",
+      "scope": "development_fitted_final_head_no_independent_score",
+      "fold": null,
+      "source": "artifacts/multimodal_20261029/final.pt",
+      "source_sha256": "4addca282d4ddf562734e41b1e67500a473397a3613cba099762fcac1fc48e29",
+      "image_checkpoint_sha256": "d9fcf647298a88b3106eb5861a866dbab937f22d191d5e5e3804e97fe23677d5",
+      "tensor_fingerprint": "959e3fa24cf84d3dfea168904e0a5524d0de04e63cd009e3ff94d43b2bbd5019",
+      "tensor_count": 6,
+      "trainable_parameters": 1225
+    },
+    {
+      "id": "clinical_oof/fold_0",
+      "kind": "clinical_logistic_fold",
+      "scope": "recovered_original_fold_predictor_not_global_final",
+      "fold": 0,
+      "source": "artifacts/clinical_oof_reproducible_20261030/folds/fold_0/model.json",
+      "source_sha256": "62d472c630866512dd460974937a2e4365664115944c9ae51e5027544eb434de",
+      "coefficient_and_transform_parameters_exact": true,
+      "intercept_status": "Algebraically recovered in prior preservation phase; not asserted bitwise identical to never-saved original intercept.",
+      "parameter_fingerprint": "bba74555ef66f6f3719df72aa8e8ef3fd7ed35fbd3f35d2cabf30660b6e3836a"
+    },
+    {
+      "id": "clinical_oof/fold_1",
+      "kind": "clinical_logistic_fold",
+      "scope": "recovered_original_fold_predictor_not_global_final",
+      "fold": 1,
+      "source": "artifacts/clinical_oof_reproducible_20261030/folds/fold_1/model.json",
+      "source_sha256": "b45b48460df2b3cf61a531d6db74560c302248e05111ee2aadb14a012da46d4b",
+      "coefficient_and_transform_parameters_exact": true,
+      "intercept_status": "Algebraically recovered in prior preservation phase; not asserted bitwise identical to never-saved original intercept.",
+      "parameter_fingerprint": "7a7fef94dd5de3e84d1977eb1ccf53900a59afc2b0b6efc6be842b4029fb6666"
+    },
+    {
+      "id": "clinical_oof/fold_2",
+      "kind": "clinical_logistic_fold",
+      "scope": "recovered_original_fold_predictor_not_global_final",
+      "fold": 2,
+      "source": "artifacts/clinical_oof_reproducible_20261030/folds/fold_2/model.json",
+      "source_sha256": "e6a5af6be119abf14c6ea52360c34931448e20b358ad596a94eb674f4f54ba73",
+      "coefficient_and_transform_parameters_exact": true,
+      "intercept_status": "Algebraically recovered in prior preservation phase; not asserted bitwise identical to never-saved original intercept.",
+      "parameter_fingerprint": "bc894ba26c6d51bb30f05a5c68547d7efc8050ac3b59856fc1490ab256b0374f"
+    },
+    {
+      "id": "clinical_oof/fold_3",
+      "kind": "clinical_logistic_fold",
+      "scope": "recovered_original_fold_predictor_not_global_final",
+      "fold": 3,
+      "source": "artifacts/clinical_oof_reproducible_20261030/folds/fold_3/model.json",
+      "source_sha256": "0bf02b74d60c194d7a428c102902f17cb3b7bae6cca9444c5bc3482917977b17",
+      "coefficient_and_transform_parameters_exact": true,
+      "intercept_status": "Algebraically recovered in prior preservation phase; not asserted bitwise identical to never-saved original intercept.",
+      "parameter_fingerprint": "873fd980a9c887581dfabc9c9f1a673d8cda5f773e79c5059ec2ad7c1dc1978c"
+    },
+    {
+      "id": "clinical_oof/fold_4",
+      "kind": "clinical_logistic_fold",
+      "scope": "recovered_original_fold_predictor_not_global_final",
+      "fold": 4,
+      "source": "artifacts/clinical_oof_reproducible_20261030/folds/fold_4/model.json",
+      "source_sha256": "1f253592124ae8eb18890798d5a486fb985742f0ad627eedbde4ac1ac5c2fc42",
+      "coefficient_and_transform_parameters_exact": true,
+      "intercept_status": "Algebraically recovered in prior preservation phase; not asserted bitwise identical to never-saved original intercept.",
+      "parameter_fingerprint": "52a34e30845a6bbc0c153f355c5b12708638bf5208c3d1133633437789a3eb1e"
+    }
+  ],
+  "new_training": false,
+  "optimizer_states_included": false,
+  "patient_identifiers_included": false,
+  "serialization": "JSON metadata + NPZ allow_pickle=False; clinical JSON",
+  "ordinary_fold_cnn_not_global_ema": true,
+  "linear_fusion": {
+    "available": false,
+    "reason": "Original linear-fusion fitted estimator parameters were not persisted. No replacement was trained or invented."
+  }
+}

@@ -1,34 +1,37 @@
-# Redistribution decisions
+# Alcance de la entrega y condiciones de reutilización
 
-| Component | Public package decision |
+| Componente | Entrega |
 |---|---|
-| Curated source, configurations and tests | Included; local project declares CC BY 4.0; adaptations documented |
-| Aggregate metrics, ROC/PR coordinates and BCE histories | Included without thresholds, identifiers or prediction rows |
-| Newly drawn architecture diagrams | Included; no patient image or paper figure copied |
-| Original datasets, image caches, clinical tables and labels | Excluded; medical-data privacy and separate custodian/license terms |
-| Individual OOF/TEST scores and actual split identifiers | Excluded; only protocol definitions are described |
-| CNN, EMA, clinical and multimodal trained weights/transforms | Excluded; redistribution/derived-data permissions not established |
-| UAX template, logo and final presentation | Excluded; redistribution permission not established |
-| Publisher figures/PDF | Excluded; no permission to adapt or republish assumed |
-| Third-party fonts, private HTML, screenshots, logs, backups | Excluded; unnecessary or rights/private-content uncertainty |
-| Private local experiment history | Not copied; the existing public repository retains its earlier commits |
+| Código, configuraciones y tests | Incluidos; licencia de código CC BY 4.0 |
+| Métricas, curvas e informes científicos | Incluidos, sin modificar resultados |
+| Pesos conservados y transformadores | Incluidos en `models/trained/`, con procedencia |
+| Metadatos públicos, particiones y predicciones OOF/TEST | Incluidos en `evaluation/`, comparados con la fuente pública |
+| Embeddings derivados del caso público | Incluidos para revisar la etapa posterior al encoder sin imágenes |
+| Resonancias, cachés de imágenes y volúmenes | No incluidos por tamaño; descarga separada |
+| Validación privada del profesor y etiquetas | Excluidas; no autorizadas para publicación |
+| Entornos, cachés, respaldos, secretos y experimentos inválidos | Excluidos |
+| Figuras editoriales y documentación ajena | Se enlazan las fuentes, no se copian |
+| Presentación académica final UAX | Incluida como trabajo académico; se conservan derechos de marca y atribución |
+| Plantilla institucional vacía y logotipo como recurso independiente | No se redistribuyen ni se ofrecen con licencia libre |
 
-Source software declares [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-The source dataset [Zenodo record](https://zenodo.org/records/18114231) declares
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). These licenses
-are not interchangeable. The publisher's paper also has separate terms; this
-package links to it without reproducing its figures.
+El [registro oficial de BreastDCEDL](https://zenodo.org/records/18114231)
+declara **CC BY-NC 4.0** y permite compartir y adaptar con atribución para fines
+no comerciales. Integra I-SPY1 (CC BY 3.0), I-SPY2 (CC BY 4.0) y Duke
+(CC BY-NC 4.0). Estas condiciones son independientes de la licencia del código.
+Conservar atribución y condiciones de las cohortes originales.
 
-The local teaching guide permits publishing personal work while retaining
-attribution and forbids private validation data/labels. That is not blanket
-permission to redistribute datasets, institutional branding or learned weights.
-The original project's license is preserved rather than replaced by MIT or a
-new claim of unrestricted ownership. See [attributions](../NOTICE.md).
+Los datos derivados de esta entrega se ofrecen para investigación y docencia no
+comercial sujetos a esas condiciones. La entrega pública del trabajo del alumno
+no concede derechos adicionales sobre datos ajenos ni marcas institucionales.
+No se permite reidentificación, diagnóstico ni recomendación terapéutica.
+Véase [NOTICE](../NOTICE.md).
 
-The initial directory preparation copied no Git history. Publication to the
-user-selected existing repository preserves that repository's prior history;
-removing a file from its current tree does not purge older commits. Review the
-exact release manifest and ownership/attribution before each commit. A clean scan
-is bounded evidence, not legal clearance or proof that every possible secret
-format has been detected.
+La guía permite publicar el trabajo personal conservando licencia y atribución,
+pero prohíbe publicar la validación privada inédita de la defensa. La revisión de
+`evaluation/` compara identificadores y campos con los metadatos del caso público.
+No incorpora pacientes nuevos de evaluación del profesor.
 
+El inventario revisado y sus hashes delimitan los archivos permitidos por la
+auditoría; los demás datos sensibles permanecen bloqueados. Un escaneo no prueba
+la ausencia de todo secreto ni resuelve todos los derechos posibles. Los originales,
+respaldos e historial anterior de Git permanecen intactos.

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "public_reference_files": {
+    "patients.csv": {
+      "sha256": "ca3b1f8e4d1bc1abf276659bda60520075ace9bd384d623e34d85746ebf50885",
+      "original_metadata_identical": true
+    },
+    "samples.csv": {
+      "sha256": "7ddd0ecc8272e6460211bd63c1479513bf815e3ea518d1b6bafdcd69f9a75c03",
+      "original_metadata_identical": true
+    }
+  },
+  "public_patients": 1273,
+  "public_slice_triplets": 12703,
+  "public_development_patients": 1097,
+  "public_test_patients": 176,
+  "primary_eligible_oof_patients": 1092,
+  "clinical_ids_labels_splits_match_public": true,
+  "clinical_age_HR_match_public_after_documented_minus_one_missing_normalization": true,
+  "clinical_all_1273_missing_counts": {
+    "age": 3,
+    "HR": 2
+  },
+  "oof_labels_folds_match_public": true,
+  "test_ids_labels_match_public": true,
+  "historical_partition_patient_sample_associations_match_public": true,
+  "embedding_ids_match_public_development": true,
+  "embedding_version": "loaded_state_v2",
+  "invalid_random_init_included": false,
+  "private_teacher_validation_included": false,
+  "MRI_images_included": false,
+  "authorization_scope": "User-authorized complete project release excluding medical images; rows verified against downloaded public teaching exports before inclusion."
+}

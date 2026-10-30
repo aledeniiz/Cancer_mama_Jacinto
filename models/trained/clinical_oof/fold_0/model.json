@@ -1,0 +1,112 @@
+{
+  "format": "clinical_logistic_fold_json_v1",
+  "fold": 0,
+  "purpose": "OOF fold-specific clinical predictor; not a final full-development model",
+  "classes": [
+    0,
+    1
+  ],
+  "positive_class": 1,
+  "target": "pCR",
+  "threshold_reference": 0.5,
+  "raw_feature_order": [
+    "age",
+    "HR"
+  ],
+  "transformed_feature_order": [
+    "age_scaled",
+    "HR_scaled",
+    "age_missing",
+    "HR_missing"
+  ],
+  "coefficient_source_order": [
+    "age",
+    "HR",
+    "age:missing",
+    "HR:missing"
+  ],
+  "coefficients": [
+    -0.21444205109968717,
+    -0.5151625269360597,
+    0.10440797002520259,
+    0.0
+  ],
+  "intercept": -0.927691602414056,
+  "clinical_transform": {
+    "features": [
+      "age",
+      "HR"
+    ],
+    "median": [
+      48.0,
+      1.0
+    ],
+    "mean": [
+      48.75138285714286,
+      0.5805714285714285
+    ],
+    "std": [
+      10.369613224733277,
+      0.4934655458063504
+    ]
+  },
+  "preprocessing": {
+    "numeric": "pandas.to_numeric(errors=coerce)",
+    "missing": "NaN/non-numeric/-1 are missing; median imputation",
+    "scaler": "original training-fold population mean/std, ddof=0",
+    "coding": "HR numeric binary 0/1; no one-hot; concatenate missing indicators",
+    "transformed_dtype": "float32",
+    "linear_predictor_dtype": "float64",
+    "input_checks": "age 18..110 or missing; HR 0/1 or missing; reject infinity"
+  },
+  "training_configuration": {
+    "estimator": "sklearn.linear_model.LogisticRegression",
+    "C": 1,
+    "solver": "liblinear",
+    "max_iter": 2000,
+    "random_state": 42,
+    "penalty": "l2",
+    "tol": 0.0001,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "dual": false,
+    "class_weight": null,
+    "sample_weight": null,
+    "note": "Explicit settings from frozen study; remaining settings are library defaults recorded with original versions."
+  },
+  "training_metadata": {
+    "artifact_date_label": "20261029",
+    "artifact_date_is_directory_label": true,
+    "training_timestamp": null,
+    "training_timestamp_note": "Not persisted explicitly by original script.",
+    "training_n": 875,
+    "validation_n": 217,
+    "historical_test_used": false,
+    "new_training_executed": false,
+    "original_environment": {
+      "torch": "2.5.1+cu121",
+      "numpy": "2.1.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.8.0",
+      "Pillow": "12.3.0",
+      "matplotlib": "3.10.6"
+    },
+    "n_iter": null,
+    "n_iter_note": "Not persisted; cannot recover solver iteration count."
+  },
+  "recovery": {
+    "coefficient_source": "original saved coefficients, unchanged",
+    "intercept_source": "algebraically recovered from original OOF p and original X beta; not refitted",
+    "method": "median(log(p/(1-p))-X@coefficients) within original held-out fold",
+    "bit_exact_original_intercept_available": false,
+    "floating_point_caveat": "Original serialized intercept did not exist. Recovered double agrees functionally to machine precision, not asserted bit-identical.",
+    "max_within_fold_intercept_spread": 1.2212453270876722e-15,
+    "max_probability_error_at_packaging": 1.1102230246251565e-16
+  },
+  "expected_validation_missing": {
+    "age": 0,
+    "HR": 2
+  },
+  "original_transform_sha256": "514d56db3a3cacc03a7b2938d71b6b47bd89d666f371a2162d67a0b80c9234c2",
+  "partition_file": "partition_reference.json"
+}

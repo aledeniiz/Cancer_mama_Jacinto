@@ -1,0 +1,252 @@
+{
+  "files": [
+    {
+      "source_relative_path": "verified_public_reference/patients.csv",
+      "release_path": "metadata/patients.csv",
+      "purpose": "Original public teaching patient table, exact bytes",
+      "original_sha256": "ca3b1f8e4d1bc1abf276659bda60520075ace9bd384d623e34d85746ebf50885",
+      "exported_sha256": "ca3b1f8e4d1bc1abf276659bda60520075ace9bd384d623e34d85746ebf50885",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "verified_public_reference/samples.csv",
+      "release_path": "metadata/samples.csv",
+      "purpose": "Original public teaching slice metadata, exact bytes; no images",
+      "original_sha256": "7ddd0ecc8272e6460211bd63c1479513bf815e3ea518d1b6bafdcd69f9a75c03",
+      "exported_sha256": "7ddd0ecc8272e6460211bd63c1479513bf815e3ea518d1b6bafdcd69f9a75c03",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/clinical.csv",
+      "release_path": "clinical/clinical_inputs.csv",
+      "purpose": "Original clinical inputs verified against public metadata",
+      "original_sha256": "36283da04b27a4b5bcc832b555807fcc8f911919a5762f8fb3f7b166057eaaa3",
+      "exported_sha256": "36283da04b27a4b5bcc832b555807fcc8f911919a5762f8fb3f7b166057eaaa3",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/oof_predictions.csv",
+      "release_path": "oof/predictions.csv",
+      "purpose": "Original four-model eligible OOF predictions; exact order and scores",
+      "original_sha256": "8ca1d011ec02e4ba2218dddfe4e0395cb01abbbf2f35471ab047727f34646daf",
+      "exported_sha256": "8ca1d011ec02e4ba2218dddfe4e0395cb01abbbf2f35471ab047727f34646daf",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "reports/compacta_test_20261029/test_patient_predictions.csv",
+      "release_path": "test/predictions.csv",
+      "purpose": "Original historical CNN EMA test predictions; separate protocol",
+      "original_sha256": "31482ad7ef9ba9a733d56e489fa712869846639c116fd9190c88d3b07b894980",
+      "exported_sha256": "31482ad7ef9ba9a733d56e489fa712869846639c116fd9190c88d3b07b894980",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "reports/multimodal_20261029/results.json",
+      "release_path": "metrics/oof_original.json",
+      "purpose": "Original aggregate OOF metrics/losses and limitations",
+      "original_sha256": "15f7482a71adc3412903e659a0632ba7598266af873506697dfb847b5b00d917",
+      "exported_sha256": "15f7482a71adc3412903e659a0632ba7598266af873506697dfb847b5b00d917",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "reports/compacta_test_20261029/metrics.json",
+      "release_path": "metrics/test_original.json",
+      "purpose": "Original historical test metrics and limitations",
+      "original_sha256": "1ceafba81ace7611834b720a52c2dd09607d963c3d9b61dba27157b20e651534",
+      "exported_sha256": "1ceafba81ace7611834b720a52c2dd09607d963c3d9b61dba27157b20e651534",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/environment.json",
+      "release_path": "protocols/environment_original.json",
+      "purpose": "Historical library versions",
+      "original_sha256": "9c37533352d62b0ba559cef091965180797fd33a47f9eda55de5bc20c9d335f0",
+      "exported_sha256": "9c37533352d62b0ba559cef091965180797fd33a47f9eda55de5bc20c9d335f0",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/curve_search_20261029/prepared/protocol.json",
+      "release_path": "protocols/cnn_ema_protocol.json",
+      "purpose": "Historical EMA/BN protocol; paths sanitized",
+      "original_sha256": "c8cd9d34e64e41c7489172e3c052657fd6d861bb362e0e6dd627f1e23c12d497",
+      "exported_sha256": "35135a77a4fbbbc7484b3f7216f86f4ce9fceea4ed1ea9ad1321a20689691aa0",
+      "adapted": true,
+      "adaptation": "Absolute filesystem paths replaced with source_project-relative paths or opaque external_resource placeholders; numeric scientific content unchanged."
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/protocol.json",
+      "release_path": "protocols/cnn_oof_protocol.json",
+      "purpose": "Historical fold CNN protocol; paths sanitized",
+      "original_sha256": "8988d1ebad97c395aae9fa4f1825da10ad803fe46ccade08ee975434db4f01bf",
+      "exported_sha256": "b0fdc0c33c9109d8971cc456f626099bdfdfc96586e098c383eb0961c4d24d12",
+      "adapted": true,
+      "adaptation": "Absolute filesystem paths replaced with source_project-relative paths or opaque external_resource placeholders; numeric scientific content unchanged."
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/ledger.json",
+      "release_path": "protocols/cnn_oof_ledger.json",
+      "purpose": "Historical completed fold ledger; paths sanitized",
+      "original_sha256": "0004bfc0074c2439ee6cd73542dee09d7d337d5c40853d004b14ad468c2e279b",
+      "exported_sha256": "c96ba582df3fd65ca99686a3a2a6ed81f53babf72402c1273a694bae4b3fa9be",
+      "adapted": true,
+      "adaptation": "Absolute filesystem paths replaced with source_project-relative paths or opaque external_resource placeholders; numeric scientific content unchanged."
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/fold_0/partition.csv",
+      "release_path": "partitions/fold_0.csv",
+      "purpose": "Exact historical sample-level fit/inner/refit/outer roles, verified public IDs",
+      "original_sha256": "dfe42917427665a5ea752e874ea090bc2fc6618db407118c8c7bdf4f0c0ea19d",
+      "exported_sha256": "dfe42917427665a5ea752e874ea090bc2fc6618db407118c8c7bdf4f0c0ea19d",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/embeddings_fold_0.npz",
+      "release_path": "embeddings/fold_0.npz",
+      "purpose": "Corrected real loaded-state frozen CNN features; excludes INVALID_random_init",
+      "original_sha256": "e50c0d70c3cbf378907e117b9027a6a31ca8290fbc941646094f8e5dac948b76",
+      "exported_sha256": "e50c0d70c3cbf378907e117b9027a6a31ca8290fbc941646094f8e5dac948b76",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/fold_1/partition.csv",
+      "release_path": "partitions/fold_1.csv",
+      "purpose": "Exact historical sample-level fit/inner/refit/outer roles, verified public IDs",
+      "original_sha256": "678b4a31ec6b4bacb204c5f52aa270f63a7c75cedea3ba24312ab1b802fd4f50",
+      "exported_sha256": "678b4a31ec6b4bacb204c5f52aa270f63a7c75cedea3ba24312ab1b802fd4f50",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/embeddings_fold_1.npz",
+      "release_path": "embeddings/fold_1.npz",
+      "purpose": "Corrected real loaded-state frozen CNN features; excludes INVALID_random_init",
+      "original_sha256": "303c939d8e2c73f5e6712d7b59f727038484b371ea42f68517540777198cadd3",
+      "exported_sha256": "303c939d8e2c73f5e6712d7b59f727038484b371ea42f68517540777198cadd3",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/fold_2/partition.csv",
+      "release_path": "partitions/fold_2.csv",
+      "purpose": "Exact historical sample-level fit/inner/refit/outer roles, verified public IDs",
+      "original_sha256": "012e9c1422f5f4ff1f6b790977e831a9f0cd1ead48da9d8017a32eb5333b94bd",
+      "exported_sha256": "012e9c1422f5f4ff1f6b790977e831a9f0cd1ead48da9d8017a32eb5333b94bd",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/embeddings_fold_2.npz",
+      "release_path": "embeddings/fold_2.npz",
+      "purpose": "Corrected real loaded-state frozen CNN features; excludes INVALID_random_init",
+      "original_sha256": "75300f38761995d75b080414c05b217882c7fbb5b5c9bcdea79b0de5a128e7ff",
+      "exported_sha256": "75300f38761995d75b080414c05b217882c7fbb5b5c9bcdea79b0de5a128e7ff",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/fold_3/partition.csv",
+      "release_path": "partitions/fold_3.csv",
+      "purpose": "Exact historical sample-level fit/inner/refit/outer roles, verified public IDs",
+      "original_sha256": "bde606d4dbb3a11d777f70877ebe2af620e682bae2bffae4fdbc57245e858f3c",
+      "exported_sha256": "bde606d4dbb3a11d777f70877ebe2af620e682bae2bffae4fdbc57245e858f3c",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/embeddings_fold_3.npz",
+      "release_path": "embeddings/fold_3.npz",
+      "purpose": "Corrected real loaded-state frozen CNN features; excludes INVALID_random_init",
+      "original_sha256": "df9285cf5e05262164949f84b5748aecdee9f6b93c1868c76e3d59cafeb2fae7",
+      "exported_sha256": "df9285cf5e05262164949f84b5748aecdee9f6b93c1868c76e3d59cafeb2fae7",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/compacta_cv15_20261028/prepared/fold_4/partition.csv",
+      "release_path": "partitions/fold_4.csv",
+      "purpose": "Exact historical sample-level fit/inner/refit/outer roles, verified public IDs",
+      "original_sha256": "4a5d4e0d744bea3e1530acaa29983d806fa26b45545f6ef33cb88b83f8ef4860",
+      "exported_sha256": "4a5d4e0d744bea3e1530acaa29983d806fa26b45545f6ef33cb88b83f8ef4860",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/embeddings_fold_4.npz",
+      "release_path": "embeddings/fold_4.npz",
+      "purpose": "Corrected real loaded-state frozen CNN features; excludes INVALID_random_init",
+      "original_sha256": "84415db54cc6bb0cde17c34d0b6216a6dbcac0c686f1f4b2681acb65b56e00fd",
+      "exported_sha256": "84415db54cc6bb0cde17c34d0b6216a6dbcac0c686f1f4b2681acb65b56e00fd",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "artifacts/multimodal_20261029/embeddings_original.npz",
+      "release_path": "embeddings/cnn_ema_development.npz",
+      "purpose": "Historical EMA development features only, not test images or independent final-head validation",
+      "original_sha256": "c3b5ab9588f74950963ae4a3a54a544a6614a3bfb58e55c69515a973538da5f1",
+      "exported_sha256": "c3b5ab9588f74950963ae4a3a54a544a6614a3bfb58e55c69515a973538da5f1",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "scripts/multimodal_study_20261029.py",
+      "release_path": "source_snapshot/scripts/multimodal_study_20261029.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "dc847d9fe456df80374816b3f665cb7b7aee66e2775611d6a9c1740b7f1e84d9",
+      "exported_sha256": "dc847d9fe456df80374816b3f665cb7b7aee66e2775611d6a9c1740b7f1e84d9",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "scripts/multimodal_supplement_20261029.py",
+      "release_path": "source_snapshot/scripts/multimodal_supplement_20261029.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "b4242ec406c4a502f76c813b807961ffcd6075a76a87aa943e9018baa1b5ba1e",
+      "exported_sha256": "b4242ec406c4a502f76c813b807961ffcd6075a76a87aa943e9018baa1b5ba1e",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "scripts/multimodal_report_20261029.py",
+      "release_path": "source_snapshot/scripts/multimodal_report_20261029.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "6d251920add2dff32dbd4017aeed07b1dadc8082293270ef622ebc4a0597ce00",
+      "exported_sha256": "6d251920add2dff32dbd4017aeed07b1dadc8082293270ef622ebc4a0597ce00",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "scripts/multimodal_clinical_audit_20261029.py",
+      "release_path": "source_snapshot/scripts/multimodal_clinical_audit_20261029.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "93a8b31f6f328e7421f53a90efdfe1fe8c054fa570f44d9d097035a884aa604b",
+      "exported_sha256": "93a8b31f6f328e7421f53a90efdfe1fe8c054fa570f44d9d097035a884aa604b",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "scripts/curve_search_20261029.py",
+      "release_path": "source_snapshot/scripts/curve_search_20261029.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "8aab5bc5daea70214aaf0ec0b02c3450c77092a9679c01d727ce872b711172c3",
+      "exported_sha256": "8aab5bc5daea70214aaf0ec0b02c3450c77092a9679c01d727ce872b711172c3",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "scripts/bn_recalibration_utils_20261028.py",
+      "release_path": "source_snapshot/scripts/bn_recalibration_utils_20261028.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "bf1c16a098b4ff44ca08c1555a14ceb82b472a79def55b8e6d662df80b37899c",
+      "exported_sha256": "bf1c16a098b4ff44ca08c1555a14ceb82b472a79def55b8e6d662df80b37899c",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "src/breastdcedl/multimodal.py",
+      "release_path": "source_snapshot/src/breastdcedl/multimodal.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "fecd2de1646bc69d1f01416ec44b957dfaa3d479b8f6a1d526ac2b34568c8656",
+      "exported_sha256": "fecd2de1646bc69d1f01416ec44b957dfaa3d479b8f6a1d526ac2b34568c8656",
+      "adapted": false
+    },
+    {
+      "source_relative_path": "presentation/multimodal_api.py",
+      "release_path": "source_snapshot/presentation/multimodal_api.py",
+      "purpose": "Exact historical provenance source; not standalone executable replacement for the sealed private source tree",
+      "original_sha256": "fa4538174f7c3abf6da9fab08bd565342320eb562f35e68af3c22d5503e7a1cc",
+      "exported_sha256": "fa4538174f7c3abf6da9fab08bd565342320eb562f35e68af3c22d5503e7a1cc",
+      "adapted": false
+    }
+  ],
+  "notes": [
+    "Source paths are relative audit provenance, not runtime dependencies.",
+    "Sanitized historical protocols preserve numeric results/settings; placeholder paths do not make snapshots executable.",
+    "Exact metric replay uses released predictions/public-verified labels; image encoder replay still requires images."
+  ]
+}

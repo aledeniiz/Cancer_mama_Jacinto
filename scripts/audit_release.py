@@ -19,6 +19,21 @@ PATTERNS={
 
 def audit():
     findings=[];items=[];groups={}
+    allowlist_path=ROOT/'docs/scientific_artifact_allowlist.json'
+    allowed={}
+    if allowlist_path.exists():
+        try:
+            entries=json.loads(allowlist_path.read_text(encoding='utf-8'))['files']
+            for entry in entries:
+                rel=entry['path'];parts=Path(rel).parts
+                if (not rel.startswith(('evaluation/','models/trained/','presentation/')) or
+                    '..' in parts or Path(rel).is_absolute() or rel in allowed or
+                    not re.fullmatch('[0-9a-f]{64}',entry['sha256']) or
+                    not isinstance(entry['size'],int) or entry['size']<0):
+                    raise ValueError('Invalid reviewed artifact entry')
+                allowed[rel]=entry
+        except (KeyError,ValueError,TypeError):
+            findings.append({'path':'docs/scientific_artifact_allowlist.json','rule':'invalid_artifact_allowlist'})
     for p in sorted(ROOT.rglob('*')):
         relative=p.relative_to(ROOT)
         # Git object storage is not part of a release or a Pages artifact.
@@ -27,19 +42,31 @@ def audit():
         if p.is_symlink():findings.append({'path':relative.as_posix(),'rule':'symlink_not_reviewed'});continue
         if not p.is_file():continue
         rel=relative.as_posix()
+        content=p.read_bytes();sha=hashlib.sha256(content).hexdigest()
+        reviewed=rel in allowed and allowed[rel]['sha256']==sha and allowed[rel]['size']==len(content)
+        if rel in allowed and not reviewed:
+            findings.append({'path':rel,'rule':'reviewed_artifact_changed'})
         if any(x in FORBIDDEN_DIR or x.endswith('.egg-info') for x in relative.parts):
             findings.append({'path':rel,'rule':'excluded_directory'})
-        if p.suffix.lower() in FORBIDDEN_EXT or p.name=='.env' or p.name.startswith('.env.'):
+        allowed_type=reviewed and p.suffix.lower() in {'.csv','.npz','.pptx','.pdf'}
+        if (p.suffix.lower() in FORBIDDEN_EXT and not allowed_type) or p.name=='.env' or p.name.startswith('.env.'):
             findings.append({'path':rel,'rule':'excluded_file_type'})
-        content=p.read_bytes();sha=hashlib.sha256(content).hexdigest()
-        if len(content)>2*1024*1024:findings.append({'path':rel,'rule':'large_file_requires_review'})
+        if len(content)>2*1024*1024 and not reviewed:findings.append({'path':rel,'rule':'large_file_requires_review'})
         try:text=content.decode('utf-8-sig')
-        except UnicodeError:findings.append({'path':rel,'rule':'binary_requires_review'});text=''
+        except UnicodeError:
+            if not allowed_type:findings.append({'path':rel,'rule':'binary_requires_review'})
+            text=''
         for rule,pattern in PATTERNS.items():
+            # Only exact reviewed public-case scientific files may contain IDs.
+            # Credential/path checks still apply to all decoded text.
+            if reviewed and rule=='medical_case_identifier':continue
             if pattern.search(text):findings.append({'path':rel,'rule':rule})
         items.append({'path':rel,'size':len(content),'sha256':sha})
         if content:groups.setdefault(sha,[]).append(rel)
     duplicates=[v for v in groups.values() if len(v)>1]
+    present={x['path'] for x in items}
+    for rel in sorted(set(allowed)-present):
+        findings.append({'path':rel,'rule':'reviewed_artifact_missing'})
     return {'status':'passed' if not findings else 'blocked','files':len(items),
         'logical_bytes':sum(x['size'] for x in items),'findings':findings,'duplicate_groups':duplicates,
         'scope':'All working-tree files except Git internal storage, including untracked/ignored files; findings omit matched values.',

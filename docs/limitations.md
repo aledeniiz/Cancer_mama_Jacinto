@@ -20,8 +20,9 @@ It does not demonstrate clinical utility.
   matched OOF but does not provide pristine external confirmation.
 - The final development-fitted multimodal checkpoint has not been independently
   validated. A new prospective or genuinely independent patient cohort is needed.
-- No trained weights or patient-level evidence is public. Software tests and
-  re-rendered aggregate plots do not reproduce the scientific experiment.
+- Preserved weights and reviewed public-case references permit metric checks and
+  replay of saved embedding stages. This does not rerun the historical training
+  or independently validate image extraction; pixel inference needs the MRIs.
 - The interface is an aggregate-results explorer, not a live medical predictor.
 
 Academic and educational research only. No diagnosis, treatment recommendation,

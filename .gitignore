@@ -69,3 +69,11 @@ audit_evidence/
 output/
 .pages-site/
 
+# Reviewed scientific release only; audit_release.py binds these to SHA-256.
+!evaluation/**/*.csv
+!evaluation/**/*.npz
+!models/trained/**/*.npz
+!presentation/DCE_UAX_Ejecutiva_Tres_Modelos.pptx
+!presentation/DCE_UAX_Ejecutiva_Tres_Modelos.pdf
+/models/trained/reload_error.txt
+

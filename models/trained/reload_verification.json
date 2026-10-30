@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "cold_independent_processes": 17,
+  "all_processes_distinct": true,
+  "manifest_files_verified": 38,
+  "state_tensors_verified": 192,
+  "clinical_fold_predictors_verified": 5,
+  "software_fixtures_only": true,
+  "new_training": false,
+  "results": [
+    {
+      "id": "cnn_ema",
+      "kind": "cnn",
+      "fold": null,
+      "status": "passed",
+      "state_tensors": 26,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "cnn_oof/fold_0",
+      "kind": "cnn",
+      "fold": 0,
+      "status": "passed",
+      "state_tensors": 26,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "cnn_oof/fold_1",
+      "kind": "cnn",
+      "fold": 1,
+      "status": "passed",
+      "state_tensors": 26,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "cnn_oof/fold_2",
+      "kind": "cnn",
+      "fold": 2,
+      "status": "passed",
+      "state_tensors": 26,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "cnn_oof/fold_3",
+      "kind": "cnn",
+      "fold": 3,
+      "status": "passed",
+      "state_tensors": 26,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "cnn_oof/fold_4",
+      "kind": "cnn",
+      "fold": 4,
+      "status": "passed",
+      "state_tensors": 26,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "fusion_oof/fold_0",
+      "kind": "neural_head",
+      "fold": 0,
+      "status": "passed",
+      "state_tensors": 6,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "fusion_oof/fold_1",
+      "kind": "neural_head",
+      "fold": 1,
+      "status": "passed",
+      "state_tensors": 6,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "fusion_oof/fold_2",
+      "kind": "neural_head",
+      "fold": 2,
+      "status": "passed",
+      "state_tensors": 6,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "fusion_oof/fold_3",
+      "kind": "neural_head",
+      "fold": 3,
+      "status": "passed",
+      "state_tensors": 6,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "fusion_oof/fold_4",
+      "kind": "neural_head",
+      "fold": 4,
+      "status": "passed",
+      "state_tensors": 6,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "multimodal_final",
+      "kind": "neural_head",
+      "fold": null,
+      "status": "passed",
+      "state_tensors": 6,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "clinical_oof/fold_0",
+      "kind": "clinical_logistic_fold",
+      "fold": 0,
+      "status": "passed",
+      "state_tensors": 0,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "clinical_oof/fold_1",
+      "kind": "clinical_logistic_fold",
+      "fold": 1,
+      "status": "passed",
+      "state_tensors": 0,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "clinical_oof/fold_2",
+      "kind": "clinical_logistic_fold",
+      "fold": 2,
+      "status": "passed",
+      "state_tensors": 0,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "clinical_oof/fold_3",
+      "kind": "clinical_logistic_fold",
+      "fold": 3,
+      "status": "passed",
+      "state_tensors": 0,
+      "finite_software_smoke": true
+    },
+    {
+      "id": "clinical_oof/fold_4",
+      "kind": "clinical_logistic_fold",
+      "fold": 4,
+      "status": "passed",
+      "state_tensors": 0,
+      "finite_software_smoke": true
+    }
+  ]
+}

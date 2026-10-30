@@ -1,0 +1,195 @@
+{
+  "scope": "Scientific release files; excludes this manifest and its seal",
+  "files": [
+    {
+      "path": "clinical/clinical_inputs.csv",
+      "size": 55086,
+      "sha256": "36283da04b27a4b5bcc832b555807fcc8f911919a5762f8fb3f7b166057eaaa3"
+    },
+    {
+      "path": "embeddings/cnn_ema_development.npz",
+      "size": 366062,
+      "sha256": "c3b5ab9588f74950963ae4a3a54a544a6614a3bfb58e55c69515a973538da5f1"
+    },
+    {
+      "path": "embeddings/fold_0.npz",
+      "size": 366062,
+      "sha256": "e50c0d70c3cbf378907e117b9027a6a31ca8290fbc941646094f8e5dac948b76"
+    },
+    {
+      "path": "embeddings/fold_1.npz",
+      "size": 366062,
+      "sha256": "303c939d8e2c73f5e6712d7b59f727038484b371ea42f68517540777198cadd3"
+    },
+    {
+      "path": "embeddings/fold_2.npz",
+      "size": 366062,
+      "sha256": "75300f38761995d75b080414c05b217882c7fbb5b5c9bcdea79b0de5a128e7ff"
+    },
+    {
+      "path": "embeddings/fold_3.npz",
+      "size": 366062,
+      "sha256": "df9285cf5e05262164949f84b5748aecdee9f6b93c1868c76e3d59cafeb2fae7"
+    },
+    {
+      "path": "embeddings/fold_4.npz",
+      "size": 366062,
+      "sha256": "84415db54cc6bb0cde17c34d0b6216a6dbcac0c686f1f4b2681acb65b56e00fd"
+    },
+    {
+      "path": "LICENSE.md",
+      "size": 2402,
+      "sha256": "f71be7b223d5edc937f9c11f71f68f2eb8a08664cf95185c7563d8624cfe5ef1"
+    },
+    {
+      "path": "metadata/patients.csv",
+      "size": 212456,
+      "sha256": "ca3b1f8e4d1bc1abf276659bda60520075ace9bd384d623e34d85746ebf50885"
+    },
+    {
+      "path": "metadata/samples.csv",
+      "size": 2733403,
+      "sha256": "7ddd0ecc8272e6460211bd63c1479513bf815e3ea518d1b6bafdcd69f9a75c03"
+    },
+    {
+      "path": "metrics/oof_original.json",
+      "size": 633243,
+      "sha256": "15f7482a71adc3412903e659a0632ba7598266af873506697dfb847b5b00d917"
+    },
+    {
+      "path": "metrics/test_original.json",
+      "size": 660,
+      "sha256": "1ceafba81ace7611834b720a52c2dd09607d963c3d9b61dba27157b20e651534"
+    },
+    {
+      "path": "oof/predictions.csv",
+      "size": 102138,
+      "sha256": "8ca1d011ec02e4ba2218dddfe4e0395cb01abbbf2f35471ab047727f34646daf"
+    },
+    {
+      "path": "partitions/development_1097.csv",
+      "size": 33063,
+      "sha256": "04aee3892f01640567cdc087b58e87cb231ff64397e0110038852cb4ea1f2d9a"
+    },
+    {
+      "path": "partitions/eligible_oof_1092.csv",
+      "size": 30732,
+      "sha256": "36a121305be6e83c5cd4e4d5739130b0ec0b8b892f8c812259bd5b5b357cf8aa"
+    },
+    {
+      "path": "partitions/fold_0.csv",
+      "size": 818670,
+      "sha256": "dfe42917427665a5ea752e874ea090bc2fc6618db407118c8c7bdf4f0c0ea19d"
+    },
+    {
+      "path": "partitions/fold_1.csv",
+      "size": 818506,
+      "sha256": "678b4a31ec6b4bacb204c5f52aa270f63a7c75cedea3ba24312ab1b802fd4f50"
+    },
+    {
+      "path": "partitions/fold_2.csv",
+      "size": 818402,
+      "sha256": "012e9c1422f5f4ff1f6b790977e831a9f0cd1ead48da9d8017a32eb5333b94bd"
+    },
+    {
+      "path": "partitions/fold_3.csv",
+      "size": 818448,
+      "sha256": "bde606d4dbb3a11d777f70877ebe2af620e682bae2bffae4fdbc57245e858f3c"
+    },
+    {
+      "path": "partitions/fold_4.csv",
+      "size": 818644,
+      "sha256": "4a5d4e0d744bea3e1530acaa29983d806fa26b45545f6ef33cb88b83f8ef4860"
+    },
+    {
+      "path": "partitions/test_176.csv",
+      "size": 4785,
+      "sha256": "03143038afc795eac11f12b5173cd8edc3ba06b8fde4e84f1f69b764462e9b1e"
+    },
+    {
+      "path": "protocols/cnn_ema_protocol.json",
+      "size": 21122,
+      "sha256": "35135a77a4fbbbc7484b3f7216f86f4ce9fceea4ed1ea9ad1321a20689691aa0"
+    },
+    {
+      "path": "protocols/cnn_oof_ledger.json",
+      "size": 29634,
+      "sha256": "c96ba582df3fd65ca99686a3a2a6ed81f53babf72402c1273a694bae4b3fa9be"
+    },
+    {
+      "path": "protocols/cnn_oof_protocol.json",
+      "size": 10354,
+      "sha256": "b0fdc0c33c9109d8971cc456f626099bdfdfc96586e098c383eb0961c4d24d12"
+    },
+    {
+      "path": "protocols/environment_original.json",
+      "size": 151,
+      "sha256": "9c37533352d62b0ba559cef091965180797fd33a47f9eda55de5bc20c9d335f0"
+    },
+    {
+      "path": "protocols/metric_replay.json",
+      "size": 1038,
+      "sha256": "360cddc938b9ee9e49da09363b1cab4e8ab9c360a86a7150f7c4dd342483c160"
+    },
+    {
+      "path": "PUBLIC_DATA_VERIFICATION.json",
+      "size": 1319,
+      "sha256": "02ee5b2973bc61ad0eeb46afd08b45b170e99a39a63dd7391b884829a73f0074"
+    },
+    {
+      "path": "README.md",
+      "size": 5827,
+      "sha256": "00ac79b139a0e35495e550075c8c38359e143beab731ec7f3fbd53a4794d87df"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "size": 14891,
+      "sha256": "7623714109588701f0918c5a97c8474ef4ef42edc4cd3bc75e21da59cd2df424"
+    },
+    {
+      "path": "source_snapshot/presentation/multimodal_api.py",
+      "size": 7349,
+      "sha256": "fa4538174f7c3abf6da9fab08bd565342320eb562f35e68af3c22d5503e7a1cc"
+    },
+    {
+      "path": "source_snapshot/scripts/bn_recalibration_utils_20261028.py",
+      "size": 3596,
+      "sha256": "bf1c16a098b4ff44ca08c1555a14ceb82b472a79def55b8e6d662df80b37899c"
+    },
+    {
+      "path": "source_snapshot/scripts/curve_search_20261029.py",
+      "size": 11653,
+      "sha256": "8aab5bc5daea70214aaf0ec0b02c3450c77092a9679c01d727ce872b711172c3"
+    },
+    {
+      "path": "source_snapshot/scripts/multimodal_clinical_audit_20261029.py",
+      "size": 10366,
+      "sha256": "93a8b31f6f328e7421f53a90efdfe1fe8c054fa570f44d9d097035a884aa604b"
+    },
+    {
+      "path": "source_snapshot/scripts/multimodal_report_20261029.py",
+      "size": 6601,
+      "sha256": "6d251920add2dff32dbd4017aeed07b1dadc8082293270ef622ebc4a0597ce00"
+    },
+    {
+      "path": "source_snapshot/scripts/multimodal_study_20261029.py",
+      "size": 10856,
+      "sha256": "dc847d9fe456df80374816b3f665cb7b7aee66e2775611d6a9c1740b7f1e84d9"
+    },
+    {
+      "path": "source_snapshot/scripts/multimodal_supplement_20261029.py",
+      "size": 3830,
+      "sha256": "b4242ec406c4a502f76c813b807961ffcd6075a76a87aa943e9018baa1b5ba1e"
+    },
+    {
+      "path": "source_snapshot/src/breastdcedl/multimodal.py",
+      "size": 2152,
+      "sha256": "fecd2de1646bc69d1f01416ec44b957dfaa3d479b8f6a1d526ac2b34568c8656"
+    },
+    {
+      "path": "test/predictions.csv",
+      "size": 10489,
+      "sha256": "31482ad7ef9ba9a733d56e489fa712869846639c116fd9190c88d3b07b894980"
+    }
+  ]
+}

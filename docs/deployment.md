@@ -10,6 +10,11 @@ No datasets, trained models, source Git storage or private patient records are
 included. GitHub Pages serves static HTML; it does not run the Python inference
 server. Private-resource controls remain unavailable with explicit notices.
 
+This restriction concerns the **Pages artifact**, not the repository: preserved
+model bundles, public teaching-case metadata, partitions and prediction references
+are now available separately in `models/trained/` and `evaluation/`. The final
+academic presentation is in `presentation/`. None is embedded into the website.
+
 ## Repository configuration
 
 Repository: [aledeniiz/Cancer_mama_Jacinto](https://github.com/aledeniiz/Cancer_mama_Jacinto).
@@ -35,6 +40,9 @@ clinical AUC 0.6450, six disabled private-resource upload controls and no consol
 errors during that check.
 
 HTML SHA-256: `4def168a02ba74e91ba79645baa408a7bc0ef215519be7a5467bb7e0e27f6e35`.
+That hash identifies the first publication. The scientific-delivery update
+retains the design and updates availability notices; its reviewed HTML SHA-256
+is `2cc599c983d1431bea6feb789d224af8e6ec6b2f866c87958a2c556ab8e9e478`.
 The same URL is linked in the repository's About section. Future deployments
 must be checked through their Actions run and actual HTTPS response; the Actions
 deployment output is the authoritative URL.

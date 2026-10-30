@@ -1,8 +1,8 @@
 """Portable authorized-data training entrypoint; not a historical rerun claim.
 
-The historical experiment also used frozen data/cache/source manifests. Those
-private manifests are not distributed, so exact metric reproduction requires
-the original authorized inputs and partition definitions.
+The scientific release preserves checkpoints, partitions and source evidence.
+Repeating the historical GPU training additionally requires the original images,
+cache/export implementation and runtime; this portable runner is not that claim.
 """
 import math
 import torch

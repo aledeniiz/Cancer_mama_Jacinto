@@ -9,5 +9,11 @@
 *.js text eol=lf
 *.svg text eol=lf
 *.png binary
-# No model weights or Git LFS pointers are distributed.
+# Preserve scientific evidence bytes and SHA-256 across operating systems.
+evaluation/** -text
+models/trained/** -text
+presentation/** -text
+*.npz binary
+*.pptx binary
+*.pdf binary
 

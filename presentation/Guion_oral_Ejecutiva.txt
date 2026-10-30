@@ -1,0 +1,38 @@
+DCE / INVESTIGACIÓN — PRESENTACIÓN EJECUTIVA
+Guion ejecutivo de aproximadamente cinco minutos.
+
+1. RETO Y CAPACIDAD CONSTRUIDA
+
+¿Podemos anticipar la respuesta al tratamiento en cáncer de mama? Nuestro trabajo investiga si la información médica disponible permite estimar la respuesta patológica completa. La pregunta tiene un resultado verificable: comprobar si una predicción se relaciona con la respuesta observada, y con qué incertidumbre.
+
+Construimos primero una CNN propia para analizar resonancias y después ampliamos el sistema con edad y receptores hormonales. La ilustración de portada es conceptual, no una resonancia de una paciente. El proyecto se presenta como investigación y desarrollo tecnológico, sin atribuirle utilidad clínica validada. La contribución consiste en construir una cadena completa y poner a prueba una hipótesis, con controles que permitan reconocer tanto lo que funciona como lo que no está demostrado.
+
+2. DOS FUENTES Y UNA REPRESENTACIÓN COMBINADA
+
+La arquitectura parte de imágenes DCE-MRI y de edad y receptores hormonales. La CNN propia extrae una representación de sesenta y cuatro rasgos visuales por paciente. La rama clínica trata los valores ausentes, ajusta la escala y genera ocho rasgos. Después unimos ambas representaciones para obtener una puntuación.
+
+Esta integración es real y se puede ejecutar en nuestra plataforma, junto con la modalidad de solo imagen. En la inferencia final mantenemos congelada la CNN definitiva EMA y añadimos una cabeza clínica. Esa cabeza final no tiene una métrica independiente asignada. Para comparar los enfoques con pacientes fuera del ajuste, utilizamos una evaluación OOF con modelos locales por fold. Debemos distinguir esa evaluación de la implementación final que ejecuta la plataforma.
+
+3. TRES RESULTADOS Y SU ALCANCE
+
+La diapositiva presenta los tres resultados que queremos explicar. La CNN definitiva de imágenes, con EMA 0,8, obtuvo una AUC de 0,5524 en su test histórico de 176 pacientes. El modelo de solo edad y receptores hormonales alcanzó 0,6450 en una evaluación OOF de cinco folds sobre 1.092 pacientes. La fusión neuronal de CNN y clínica obtuvo 0,6326 en esa misma evaluación OOF.
+
+Cada fila identifica su protocolo. La primera no es directamente comparable con las otras dos: cambian población, pesos y evaluación. Por tanto, este gráfico descriptivo no demuestra que la fusión mejore la CNN definitivaEMA. AUC tampoco es porcentaje de aciertos.
+
+Clínica y fusión sí comparten el protocoloOOF. En esa comparación, la fusión no demuestra una ventaja adicional frente a clínica sola: la diferencia es negativa y su intervalo de confianza incluye cero. Solo la fusión es multimodal; el modelo clínico no usa imágenes. La cabeza final que combina laEMAcongelada con clínica es ejecutable, pero no recibe automáticamente las métricas de los modelos porfold.
+
+4. ACTIVOS Y EVIDENCIA
+
+Tenemos datos preparados, una arquitectura propia de 24.713 parámetros, dos modalidades ejecutables y una evaluación comparativa trazable. La base documentada contiene 38.109 imágenes. Estos son entregables concretos que podemos enseñar y verificar.
+
+También contrastamos una hipótesis relevante: que incorporar imagen aportaría valor adicional frente a información clínica sencilla. Este experimento no lo demuestra. Esa conclusión ayuda a evitar que elijamos un sistema más complejo solo por su apariencia tecnológica. Es un resultado de investigación útil, aunque no sea el resultado positivo que se buscaba.
+
+Podemos defender una capacidad técnica ejecutable y una conclusión experimental con límites explícitos. La eficacia clínica sigue pendiente. No afirmamos ahorro económico, impacto asistencial ni causalidad del tratamiento sin haberlos medido.
+
+5. CONCLUSIONES Y DECISIÓN
+
+Construimos el sistema, evaluamos alternativas y aprendimos que la clínica es la referencia más fuerte en el protocolo comparativo. El siguiente paso debe basarse en hitos medibles: una cohorte independiente, control de calidad de imágenes y etiquetas, y un protocolo fijado antes de evaluar.
+
+Para defender el valor complementario de la imagen habría que demostrar una mejora reproducible sobre la referencia clínica, con su incertidumbre y en pacientes nuevos. Antes de un uso hospitalario también serían necesarias calibración y evaluación prospectiva de una finalidad concreta.
+
+La recomendación es continuar investigando con decisiones condicionadas a evidencia nueva. Hemos construido una capacidad real y una forma de comprobarla. Ahora podemos definir con precisión qué tendría que demostrarse para avanzar.

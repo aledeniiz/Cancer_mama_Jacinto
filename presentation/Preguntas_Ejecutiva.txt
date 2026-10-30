@@ -1,0 +1,22 @@
+DEFENSA EJECUTIVA — PREGUNTAS ACTUALIZADAS
+
+1. ¿Qué muestra ahora la diapositiva 3?
+Tres resultados reportados: CNNdefinitivaEMA 0,8, AUC 0,5524 enTESThistórico 176; clínica sola edad+HR, AUC 0,6450 enOOF 1092; fusiónneuronalCNN+clínica, AUC 0,6326 eneseOOF 1092. El gráfico es descriptivo porque no todas las barras comparten protocolo. Solo la fusión es multimodal.
+
+2. ¿La fusión mejora a la CNNdefinitivaEMA?
+No puede concluirse a partir de estas barras. LaEMA se evaluó enTEST 176 y la fusión porfold enOOF 1092, con pesos y pacientes distintos. Enel experimentoOOF separado la fusión mejoró numéricamente su referenciaCNNlocal, pero ese dato no demuestra una mejora sobre laCNNdefinitivaEMA.
+
+3. ¿La fusión mejora a clínica sola?
+No se ha demostrado esa ventaja en la evaluaciónOOF compartida. Clínica 0,6450 frente a fusión 0,6326. DeltaAUCfusiónmenosclínica:−0,01245, IC 95%[−0,03777;+0,01113]. La integración tecnológica funciona, pero su mayor complejidad no demuestra valor predictivo adicional.
+
+4. ¿La plataforma ejecuta la CNN definitiva EMA?
+Sí. La inferencia final mantiene congelada la rama visual EMA 0,8 y añade una cabeza clínica en modo multimodal. Esa cabeza final no tiene rendimiento independiente asignado. Las métricasOOF proceden de modelos localesporfold, distintos de laEMAglobal final.
+
+5. ¿Por qué es defendible el proyecto con una CNN limitada?
+Hay entregables verificables: datos preparados, arquitectura propia, dos modalidades de inferencia, plataforma y evaluación trazable. Además se contrastó la hipótesis de que la imagen aportaría valor sobre una referencia clínica. No demostrar ese valor adicional es un resultado útil para decidir qué complejidad merece investigarse. No convierte la CNN en un modelo clínicamente eficaz.
+
+6. ¿Por qué clínica funciona mejor y la CNN tiene limitaciones?
+Observamos mayor discriminación clínica en este protocolo, pero no hemos demostrado una causa única. Calidad o representación de las imágenes, heterogeneidad, tamaño muestral y aprendizaje son hipótesis plausibles. LasCNNporfold reutilizadas conservan también una limitación residual de etiquetas ruidosas. Son asociaciones predictivas, no efectos causales del tratamiento.
+
+7. ¿Qué habría que demostrar antes del uso hospitalario?
+Rendimiento y calibración en cohortes independientes, calidad de etiquetas e imagen, compatibilidad del preprocesamiento y disponibilidad de variables al predecir. Después haría falta evaluación prospectiva de una finalidad concreta y de la utilidad frente a referencias clínicas. El bootstrap actual es condicional a losfolds entrenados y no incorpora toda la variabilidad de ajuste o selección.

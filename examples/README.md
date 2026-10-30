@@ -1,7 +1,8 @@
 # Local authorized input contracts
 
-No example patient records or labels are distributed. Unit-test arrays are
-synthetic software fixtures and are never used to claim scientific performance.
+Reviewed public-case records and labels are in `evaluation/`, and model bundles
+in `models/trained/`. Unit-test arrays remain synthetic software fixtures and
+are never used to claim scientific performance.
 
 The local slice metadata CSV must have columns:
 

@@ -1,4 +1,4 @@
-/* Original platform explanations. Public copy ships no weights, patient records or live inference. */
+/* Original platform explanations. Static browser bundle does not load repository model/evaluation files or run an inference API. */
 (()=>{'use strict';
 const contexts={
  overview:['Dos modelos implementados en el proyecto','Tres fases DCE-MRI alimentan nuestra CNN definitiva EMA 0,8.','La misma CNN EMA congelada aporta 64 características; edad y HR añaden información clínica.'],
@@ -7,8 +7,8 @@ const contexts={
  cnn:['Qué aprende la parte visual y qué añade la clínica','Cuatro bloques de 8, 16, 32 y 64 canales aprenden representaciones de las imágenes. El laboratorio inferior explica sus operaciones.','El multimodal reutiliza esos bloques congelados. Una rama clínica de 8 unidades y una cabeza de fusión aprenden a combinar las dos fuentes.'],
  architecture:['Arquitecturas: una base compartida, dos salidas','64 características visuales por paciente pasan al clasificador original de la CNN.','64 características visuales y 8 clínicas se concatenan; la cabeza de fusión transforma 72 → 16 → 1.'],
  evaluation:['Dos evaluaciones que deben leerse por separado','CNN definitiva EMA: evaluación histórica en 176 pacientes de prueba, AUC 0,5524. Las gráficas de este capítulo corresponden a ese experimento.','La comparación emparejada está en IA multimodal: cinco folds y 1.092 pacientes. Utiliza CNN de cada fold; no asigna su AUC al modelo final con EMA.'],
- patients:['Alcance del explorador de pacientes','La plataforma privada permite revisar predicciones guardadas de la CNN EMA. Sus casos, puntuaciones y etiquetas no se distribuyen.','Esta copia conserva el diseño del explorador con un estado de datos protegidos. No muestra pacientes ni predicciones individuales inventadas.'],
- live:['Qué ejecuta cada modelo en la plataforma privada','Solo imágenes: la implementación original ejecuta la CNN definitiva EMA 0,8 y su clasificador. Los pesos no se distribuyen aquí.','Imágenes y clínica: la implementación original añade el transformador clínico y la cabeza multimodal. En esta copia pública la carga y la inferencia permanecen desactivadas.'],
+ patients:['Alcance del explorador de pacientes','La plataforma original permite revisar predicciones guardadas de la CNN EMA. Los archivos de evaluación se incluyen en el repositorio, pero no se incorporan a esta página.','Esta copia conserva el diseño del explorador con su carga de datos desactivada. No muestra pacientes ni predicciones individuales inventadas.'],
+ live:['Qué ejecuta cada modelo en el análisis local','Solo imágenes: la implementación original ejecuta la CNN definitiva EMA 0,8 y su clasificador. Los pesos se incluyen en models/trained; esta página no los ejecuta.','Imágenes y clínica: la implementación original añade el transformador clínico y la cabeza multimodal. En esta copia pública la carga y la inferencia permanecen desactivadas.'],
  interpretation:['Cómo interpretar ambas predicciones','Una puntuación de la CNN expresa su salida, no una probabilidad clínica validada.','Una puntuación multimodal distinta no demuestra mayor precisión para ese paciente. El valor añadido se estudia comparando resultados en pacientes reservados.']
 };
 for(const [id,[title,image,fusion]] of Object.entries(contexts)){

@@ -7760,18 +7760,18 @@
     "available": false,
     "means": [],
     "std": [],
-    "reason": "Transformadores entrenados no distribuidos."
+    "reason": "Transformadores incluidos en los artefactos de modelos; no cargados en este visor estático."
   },
   "public_export": true,
   "provenance": {
-    "scope": "Copia pública de la plataforma original, con resultados agregados verificados.",
+    "scope": "Vista web estática de la plataforma original; pesos, metadatos y predicciones están disponibles por separado en el repositorio.",
     "aggregate_source": "results/study.json",
     "images": "Ilustraciones procedimentales sintéticas; ninguna imagen de paciente distribuida.",
-    "individual_predictions": "No distribuidas.",
-    "clinical_models": "Cinco evaluadores OOF privados; no son un modelo clínico global.",
-    "final_multimodal": "Cabeza final privada sin evaluación independiente propia.",
-    "calibration": "No distribuida; se omiten todos los intervalos para evitar celdas individuales.",
+    "individual_predictions": "Incluidas en evaluation/ para análisis local; no cargadas en esta página.",
+    "clinical_models": "Cinco evaluadores clínicos OOF distribuidos como artefactos separados; no son un modelo clínico global.",
+    "final_multimodal": "Cabeza final distribuida como artefacto separado, sin evaluación independiente propia.",
+    "calibration": "No incorporada al bundle web estático; consultar los archivos de evaluación para análisis local.",
     "curves": "project-data.json · trayectoria EMA agregada de 15 épocas",
-    "predictions": "project-data.json · métricas agregadas; predicciones individuales no distribuidas"
+    "predictions": "project-data.json contiene las métricas agregadas; evaluation/ contiene las predicciones descargables."
   }
 }

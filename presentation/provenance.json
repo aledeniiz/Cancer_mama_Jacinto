@@ -1,0 +1,44 @@
+{
+  "copy_only": true,
+  "source_modified": false,
+  "slides": 5,
+  "same_protocol_comparison": false,
+  "files": [
+    {
+      "path": "DCE_UAX_Ejecutiva_Tres_Modelos.pptx",
+      "size": 3212156,
+      "sha256": "cfd3c6c7bdfde5d171d415dc73902376e2c2bb2949eb12f40960facc89317770",
+      "source_relative_path": "presentation/uax-estilo-ejecutivo/DCE_UAX_Ejecutiva_Tres_Modelos.pptx"
+    },
+    {
+      "path": "DCE_UAX_Ejecutiva_Tres_Modelos.pdf",
+      "size": 507900,
+      "sha256": "e0e71c267ee3fa2ff8ff86f2a5a783f8c11d6ae2547a586e5855ba484b383ef5",
+      "source_relative_path": "presentation/uax-estilo-ejecutivo/DCE_UAX_Ejecutiva_Tres_Modelos.pdf"
+    },
+    {
+      "path": "Guion_oral_Ejecutiva.txt",
+      "size": 4714,
+      "sha256": "d570557695792d087961516070d38c1af1ef7e9d5e83ab441dafd4266cf54f0c",
+      "source_relative_path": "presentation/uax-estilo-ejecutivo/Guion_oral_Ejecutiva.txt"
+    },
+    {
+      "path": "Preguntas_Ejecutiva.txt",
+      "size": 2749,
+      "sha256": "c451811b16641a4ea0889913bc618534570a03ffea79ae43da0a4014938d2068",
+      "source_relative_path": "presentation/uax-estilo-ejecutivo/Preguntas_Ejecutiva.txt"
+    },
+    {
+      "path": "Notas_tecnicas_y_fuentes.txt",
+      "size": 3082,
+      "sha256": "758c8ba64e7720abd6e6d73743256a53c84753f208ae9de069fc38a1f400e39c",
+      "source_relative_path": "presentation/uax-estilo-ejecutivo/Notas_tecnicas_y_fuentes.txt"
+    },
+    {
+      "path": "OFL_Muli.txt",
+      "size": 4372,
+      "sha256": "7f55affd2bce8ed9be13297ba8df1a4a7e9835c2a006126dc2a1eb4ce75a7943",
+      "source_relative_path": "presentation/uax-estilo-ejecutivo/OFL_Muli.txt"
+    }
+  ]
+}
