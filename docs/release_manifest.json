@@ -299,8 +299,8 @@
     },
     {
       "path": "web/index.html",
-      "size": 648389,
-      "sha256": "4def168a02ba74e91ba79645baa408a7bc0ef215519be7a5467bb7e0e27f6e35"
+      "size": 648415,
+      "sha256": "0753a909dcd1b40261dfa5ea111247b2bf05ecddd8914ff2046a53dc82e8be1d"
     },
     {
       "path": "web/lab.html",
@@ -339,8 +339,8 @@
     },
     {
       "path": "web/multimodal.js",
-      "size": 12411,
-      "sha256": "eb9ff50dddf6ccae2fcbbb66b8d541d59cda85020637eaa277ebc82e3a74f507"
+      "size": 12437,
+      "sha256": "b642554b1d02ae89b9fdb502a4c99f21eb154d8ecf64f688c59e17513d5ed01b"
     },
     {
       "path": "web/premium-charts.css",
